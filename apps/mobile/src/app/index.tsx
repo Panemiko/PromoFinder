@@ -2,17 +2,16 @@ import React from "react";
 import { Button, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link, Stack } from "expo-router";
+import { api } from "@/utils/api";
+import type { RouterOutputs } from "@/utils/api";
 import { FlashList } from "@shopify/flash-list";
-
-import { api } from "~/utils/api";
-import type { RouterOutputs } from "~/utils/api";
 
 function PostCard(props: {
   post: RouterOutputs["post"]["all"][number];
   onDelete: () => void;
 }) {
   return (
-    <View className="flex flex-row rounded-lg bg-white/10 p-4">
+    <View className="bg-white/10 flex flex-row rounded-lg p-4">
       <View className="flex-grow">
         <Link
           asChild
@@ -22,15 +21,15 @@ function PostCard(props: {
           }}
         >
           <TouchableOpacity>
-            <Text className="text-xl font-semibold text-pink-400">
+            <Text className="text-pink-400 text-xl font-semibold">
               {props.post.title}
             </Text>
-            <Text className="mt-2 text-white">{props.post.content}</Text>
+            <Text className="text-white mt-2">{props.post.content}</Text>
           </TouchableOpacity>
         </Link>
       </View>
       <TouchableOpacity onPress={props.onDelete}>
-        <Text className="font-bold uppercase text-pink-400">Delete</Text>
+        <Text className="text-pink-400 font-bold uppercase">Delete</Text>
       </TouchableOpacity>
     </View>
   );
@@ -53,31 +52,31 @@ function CreatePost() {
   return (
     <View className="mt-4">
       <TextInput
-        className="mb-2 rounded bg-white/10 p-2 text-white"
+        className="bg-white/10 text-white mb-2 rounded p-2"
         placeholderTextColor="rgba(255, 255, 255, 0.5)"
         value={title}
         onChangeText={setTitle}
         placeholder="Title"
       />
       {error?.data?.zodError?.fieldErrors.title && (
-        <Text className="mb-2 text-red-500">
+        <Text className="text-red-500 mb-2">
           {error.data.zodError.fieldErrors.title}
         </Text>
       )}
       <TextInput
-        className="mb-2 rounded bg-white/10 p-2 text-white"
+        className="bg-white/10 text-white mb-2 rounded p-2"
         placeholderTextColor="rgba(255, 255, 255, 0.5)"
         value={content}
         onChangeText={setContent}
         placeholder="Content"
       />
       {error?.data?.zodError?.fieldErrors.content && (
-        <Text className="mb-2 text-red-500">
+        <Text className="text-red-500 mb-2">
           {error.data.zodError.fieldErrors.content}
         </Text>
       )}
       <TouchableOpacity
-        className="rounded bg-pink-400 p-2"
+        className="bg-pink-400 rounded p-2"
         onPress={() => {
           mutate({
             title,
@@ -85,7 +84,7 @@ function CreatePost() {
           });
         }}
       >
-        <Text className="font-semibold text-white">Publish post</Text>
+        <Text className="text-white font-semibold">Publish post</Text>
       </TouchableOpacity>
     </View>
   );
@@ -105,7 +104,7 @@ const Index = () => {
       {/* Changes page title visible on the header */}
       <Stack.Screen options={{ title: "Home Page" }} />
       <View className="h-full w-full p-4">
-        <Text className="mx-auto pb-2 text-5xl font-bold text-white">
+        <Text className="text-white mx-auto pb-2 text-5xl font-bold">
           Create <Text className="text-pink-400">T3</Text> Turbo
         </Text>
 
@@ -116,7 +115,7 @@ const Index = () => {
         />
 
         <View className="py-2">
-          <Text className="font-semibold italic text-white">
+          <Text className="text-white font-semibold italic">
             Press on a post
           </Text>
         </View>
