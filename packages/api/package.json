@@ -12,7 +12,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@promofindr/auth": "^0.1.0",
     "@promofindr/db": "^0.1.0",
     "@trpc/client": "^10.40.0",
     "@trpc/server": "^10.40.0",
