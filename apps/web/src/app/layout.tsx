@@ -3,25 +3,26 @@ import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
 
+import { site } from "@/config/site";
+
 const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Create T3 Turbo",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  title: {
+    default: site.title,
+    template: `%s - ${site.title}`,
+  },
+  description: site.description,
   openGraph: {
-    title: "Create T3 Turbo",
-    description: "Simple monorepo with shared backend for web & mobile apps",
-    url: "https://create-t3-turbo.vercel.app",
-    siteName: "Create T3 Turbo",
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    siteName: site.title,
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@jullerino",
-    creator: "@jullerino",
-  },
+  metadataBase: new URL(site.url),
 };
 
 export default function RootLayout({
