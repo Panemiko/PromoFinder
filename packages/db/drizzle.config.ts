@@ -1,19 +1,16 @@
 import * as dotenv from "dotenv";
 import type { Config } from "drizzle-kit";
+import { env } from './env.mjs';
 
 dotenv.config({
   path: "../../.env",
 });
 
-if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL is not set");
-}
-
 export default {
   schema: "./schema",
   driver: "mysql2",
   dbCredentials: {
-    connectionString: process.env.DATABASE_URL,
+    connectionString: env.DATABASE_URL,
   },
-  tablesFilter: ["t3turbo_*"],
+  tablesFilter: ["promofinder_*"],
 } satisfies Config;

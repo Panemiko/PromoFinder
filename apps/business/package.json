@@ -1,0 +1,49 @@
+{
+  "name": "@promofindr/business",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm with-env next build",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "dev": "pnpm with-env next dev",
+    "lint": "dotenv -v SKIP_ENV_VALIDATION=1 next lint",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
+    "start": "pnpm with-env next start",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.7.0",
+    "@tanstack/react-query": "^4.35.7",
+    "@tanstack/react-query-devtools": "^4.35.7",
+    "@tanstack/react-query-next-experimental": "5.0.0-alpha.80",
+    "next": "^13.5.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "superjson": "1.13.1",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@promofindr/eslint-config": "0.2.0",
+    "@promofindr/prettier-config": "0.1.0",
+    "@promofindr/tailwind-config": "0.1.0",
+    "@promofindr/tsconfig": "0.1.0",
+    "@types/node": "^18.17.19",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.10",
+    "dotenv-cli": "^7.3.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.2.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@promofindr/eslint-config/base",
+      "@promofindr/eslint-config/nextjs",
+      "@promofindr/eslint-config/react"
+    ]
+  },
+  "prettier": "@promofindr/prettier-config"
+}
