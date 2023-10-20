@@ -1,5 +1,5 @@
 {
-  "name": "@promofindr/api",
+  "name": "@promofinder/api",
   "version": "0.1.0",
   "private": true,
   "main": "./index.ts",
@@ -12,16 +12,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@promofindr/db": "^0.1.0",
+    "@promofinder/db": "^0.1.0",
     "@trpc/client": "^10.40.0",
     "@trpc/server": "^10.40.0",
     "superjson": "1.13.1",
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@promofindr/eslint-config": "^0.2.0",
-    "@promofindr/prettier-config": "^0.1.0",
-    "@promofindr/tsconfig": "^0.1.0",
+    "@promofinder/eslint-config": "^0.2.0",
+    "@promofinder/prettier-config": "^0.1.0",
+    "@promofinder/tsconfig": "^0.1.0",
     "eslint": "^8.50.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
@@ -29,8 +29,8 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@promofindr/eslint-config/base"
+      "@promofinder/eslint-config/base"
     ]
   },
-  "prettier": "@promofindr/prettier-config"
+  "prettier": "@promofinder/prettier-config"
 }

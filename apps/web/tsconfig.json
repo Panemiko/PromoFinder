@@ -1,5 +1,5 @@
 {
-  "extends": "@promofindr/tsconfig/base.json",
+  "extends": "@promofinder/tsconfig/base.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

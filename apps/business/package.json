@@ -1,5 +1,5 @@
 {
-  "name": "@promofindr/business",
+  "name": "@promofinder/business",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,10 +24,10 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@promofindr/eslint-config": "0.2.0",
-    "@promofindr/prettier-config": "0.1.0",
-    "@promofindr/tailwind-config": "0.1.0",
-    "@promofindr/tsconfig": "0.1.0",
+    "@promofinder/eslint-config": "0.2.0",
+    "@promofinder/prettier-config": "0.1.0",
+    "@promofinder/tailwind-config": "0.1.0",
+    "@promofinder/tsconfig": "0.1.0",
     "@types/node": "^18.17.19",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.10",
@@ -40,10 +40,10 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@promofindr/eslint-config/base",
-      "@promofindr/eslint-config/nextjs",
-      "@promofindr/eslint-config/react"
+      "@promofinder/eslint-config/base",
+      "@promofinder/eslint-config/nextjs",
+      "@promofinder/eslint-config/react"
     ]
   },
-  "prettier": "@promofindr/prettier-config"
+  "prettier": "@promofinder/prettier-config"
 }

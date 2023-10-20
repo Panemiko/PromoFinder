@@ -1,5 +1,5 @@
 {
-  "name": "promofindr",
+  "name": "promofinder",
   "private": true,
   "engines": {
     "node": ">=v18.18.0"
@@ -20,11 +20,11 @@
   },
   "dependencies": {
     "@manypkg/cli": "^0.21.0",
-    "@promofindr/prettier-config": "^0.1.0",
+    "@promofinder/prettier-config": "^0.1.0",
     "@turbo/gen": "^1.10.15",
     "prettier": "^3.0.3",
     "turbo": "^1.10.15",
     "typescript": "^5.2.2"
   },
-  "prettier": "@promofindr/prettier-config"
+  "prettier": "@promofinder/prettier-config"
 }

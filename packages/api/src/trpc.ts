@@ -10,9 +10,9 @@ import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-import { auth } from "@promofindr/auth";
-import type { Session } from "@promofindr/auth";
-import { db } from "@promofindr/db";
+import { auth } from "@promofinder/auth";
+import type { Session } from "@promofinder/auth";
+import { db } from "@promofinder/db";
 
 /**
  * 1. CONTEXT

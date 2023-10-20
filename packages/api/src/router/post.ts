@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { desc, eq, schema } from "@promofindr/db";
+import { desc, eq, schema } from "@promofinder/db";
 
 import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 

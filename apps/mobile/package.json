@@ -1,5 +1,5 @@
 {
-  "name": "@promofindr/mobile",
+  "name": "@promofinder/mobile",
   "version": "0.1.0",
   "private": true,
   "main": "index.tsx",
@@ -41,11 +41,11 @@
     "@babel/preset-env": "^7.22.20",
     "@babel/runtime": "^7.23.1",
     "@expo/config-plugins": "^7.2.5",
-    "@promofindr/api": "^0.1.0",
-    "@promofindr/eslint-config": "^0.2.0",
-    "@promofindr/prettier-config": "^0.1.0",
-    "@promofindr/tailwind-config": "^0.1.0",
-    "@promofindr/tsconfig": "^0.1.0",
+    "@promofinder/api": "^0.1.0",
+    "@promofinder/eslint-config": "^0.2.0",
+    "@promofinder/prettier-config": "^0.1.0",
+    "@promofinder/tailwind-config": "^0.1.0",
+    "@promofinder/tsconfig": "^0.1.0",
     "@types/babel__core": "^7.20.2",
     "@types/react": "^18.2.25",
     "eslint": "^8.50.0",
@@ -56,9 +56,9 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@promofindr/eslint-config/base",
-      "@promofindr/eslint-config/react"
+      "@promofinder/eslint-config/base",
+      "@promofinder/eslint-config/react"
     ]
   },
-  "prettier": "@promofindr/prettier-config"
+  "prettier": "@promofinder/prettier-config"
 }

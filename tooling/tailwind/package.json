@@ -1,5 +1,5 @@
 {
-  "name": "@promofindr/tailwind-config",
+  "name": "@promofinder/tailwind-config",
   "version": "0.1.0",
   "private": true,
   "main": "index.ts",
@@ -21,9 +21,9 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "@promofindr/eslint-config": "^0.2.0",
-    "@promofindr/prettier-config": "^0.1.0",
-    "@promofindr/tsconfig": "^0.1.0",
+    "@promofinder/eslint-config": "^0.2.0",
+    "@promofinder/prettier-config": "^0.1.0",
+    "@promofinder/tsconfig": "^0.1.0",
     "eslint": "^8.50.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
@@ -31,8 +31,8 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@promofindr/eslint-config/base"
+      "@promofinder/eslint-config/base"
     ]
   },
-  "prettier": "@promofindr/prettier-config"
+  "prettier": "@promofinder/prettier-config"
 }

@@ -9,7 +9,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "input",
         name: "name",
         message:
-          "What is the name of the package? (You can skip the `@promofindr/` prefix)",
+          "What is the name of the package? (You can skip the `@promofinder/` prefix)",
       },
       {
         type: "input",
@@ -21,8 +21,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: [
       (answers) => {
         if ("name" in answers && typeof answers.name === "string") {
-          if (answers.name.startsWith("@promofindr/")) {
-            answers.name = answers.name.replace("@promofindr/", "");
+          if (answers.name.startsWith("@promofinder/")) {
+            answers.name = answers.name.replace("@promofinder/", "");
           }
         }
         return "Config sanitized";
