@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ptBR } from "@clerk/localizations";
 import { ClerkProvider } from "@clerk/nextjs";
+
 import { colors } from "@promofinder/tailwind-config";
 
 export function ClerkReactProvider({ children }: { children: ReactNode }) {
@@ -27,7 +28,6 @@ export function ClerkReactProvider({ children }: { children: ReactNode }) {
         },
         elements: {
           card: "shadow-none",
-          formFieldLabel: "text-neutral-12",
         },
       }}
     >

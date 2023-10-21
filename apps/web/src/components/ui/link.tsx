@@ -12,7 +12,7 @@ export function Link({
   return (
     <NextLink
       href={href}
-      className={cn("font-medium text-secondary-11", className)}
+      className={cn("text-primary-11", className)}
       {...props}
     >
       {children}
