@@ -13,7 +13,7 @@ export const colors = {
     9: orange.orange9,
     10: orange.orange10,
     11: orange.orange11,
-    12: orange.orange11,
+    12: orange.orange12,
   },
 
   neutral: {
@@ -28,7 +28,7 @@ export const colors = {
     9: sand.sand9,
     10: sand.sand10,
     11: sand.sand11,
-    12: sand.sand11,
+    12: sand.sand12,
   },
 
   secondary: {
@@ -43,7 +43,7 @@ export const colors = {
     9: indigo.indigo9,
     10: indigo.indigo10,
     11: indigo.indigo11,
-    12: indigo.indigo11,
+    12: indigo.indigo12,
   },
 
   success: {
@@ -58,7 +58,7 @@ export const colors = {
     9: grass.grass9,
     10: grass.grass10,
     11: grass.grass11,
-    12: grass.grass11,
+    12: grass.grass12,
   },
 
   danger: {
@@ -73,7 +73,7 @@ export const colors = {
     9: tomato.tomato9,
     10: tomato.tomato10,
     11: tomato.tomato11,
-    12: tomato.tomato11,
+    12: tomato.tomato12,
   },
 
   warning: {
@@ -88,6 +88,6 @@ export const colors = {
     9: yellow.yellow9,
     10: yellow.yellow10,
     11: yellow.yellow11,
-    12: yellow.yellow11,
+    12: yellow.yellow12,
   },
 };

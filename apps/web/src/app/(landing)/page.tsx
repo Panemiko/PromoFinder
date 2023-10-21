@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div>
-      <span>1</span>
+      <span>Landing page</span>
     </div>
   );
 }

@@ -6,13 +6,15 @@
  * tl;dr - this is where all the tRPC server stuff is created and plugged in.
  * The pieces you will need to use are documented accordingly near the end
  */
+import { auth } from "@clerk/nextjs";
+import type {
+  SignedInAuthObject,
+  SignedOutAuthObject,
+} from "@clerk/nextjs/dist/types/server";
+import { db } from "@promofinder/db";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
-
-import { auth } from "@promofinder/auth";
-import type { Session } from "@promofinder/auth";
-import { db } from "@promofinder/db";
 
 /**
  * 1. CONTEXT
@@ -24,7 +26,7 @@ import { db } from "@promofinder/db";
  *
  */
 interface CreateContextOptions {
-  session: Session | null;
+  auth: SignedInAuthObject | SignedOutAuthObject;
 }
 
 /**
@@ -38,7 +40,7 @@ interface CreateContextOptions {
  */
 const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
-    session: opts.session,
+    auth: opts.auth,
     db,
   };
 };
@@ -50,15 +52,15 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
  */
 export const createTRPCContext = async (opts: {
   req?: Request;
-  auth?: Session;
+  auth?: SignedInAuthObject | SignedOutAuthObject;
 }) => {
-  const session = opts.auth ?? (await auth());
-  const source = opts.req?.headers.get("x-trpc-source") ?? "unknown";
+  const ctxAuth = opts.auth ?? auth();
 
-  console.log(">>> tRPC Request from", source, "by", session?.user);
+  const source = opts.req?.headers.get("x-trpc-source") ?? "unknown";
+  console.log(">>> tRPC Request from", source, "by", ctxAuth.userId);
 
   return createInnerTRPCContext({
-    session,
+    auth: ctxAuth,
   });
 };
 
@@ -109,13 +111,14 @@ export const publicProcedure = t.procedure;
  * procedure
  */
 const enforceUserIsAuthed = t.middleware(({ ctx, next }) => {
-  if (!ctx.session?.user) {
+  if (!ctx.auth.userId) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
+
   return next({
     ctx: {
       // infers the `session` as non-nullable
-      session: { ...ctx.session, user: ctx.session.user },
+      auth: { ...ctx.auth },
     },
   });
 });
