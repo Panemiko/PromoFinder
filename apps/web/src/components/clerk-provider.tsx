@@ -28,6 +28,7 @@ export function ClerkReactProvider({ children }: { children: ReactNode }) {
         },
         elements: {
           card: "shadow-none",
+          userButtonPopoverCard: "bg-neutral-2 border border-neutral-6",
         },
       }}
     >

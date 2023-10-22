@@ -195,6 +195,9 @@ importers:
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
       zod:
         specifier: ^3.22.2
         version: 3.22.2
@@ -244,6 +247,9 @@ importers:
       '@promofinder/db':
         specifier: ^0.1.0
         version: link:../db
+      '@promofinder/validation':
+        specifier: ^0.1.0
+        version: link:../validation
       '@trpc/client':
         specifier: ^10.40.0
         version: 10.40.0(@trpc/server@10.40.0)
@@ -253,6 +259,9 @@ importers:
       superjson:
         specifier: 1.13.1
         version: 1.13.1
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
       zod:
         specifier: ^3.22.2
         version: 3.22.2
@@ -266,6 +275,9 @@ importers:
       '@promofinder/tsconfig':
         specifier: ^0.1.0
         version: link:../../tooling/typescript
+      '@types/uuid':
+        specifier: ^9.0.6
+        version: 9.0.6
       eslint:
         specifier: ^8.50.0
         version: 8.50.0
@@ -281,9 +293,6 @@ importers:
       '@planetscale/database':
         specifier: ^1.11.0
         version: 1.11.0
-      '@t3-oss/env-nextjs':
-        specifier: ^0.7.0
-        version: 0.7.0(typescript@5.2.2)(zod@3.22.2)
       drizzle-orm:
         specifier: ^0.28.6
         version: 0.28.6(@planetscale/database@1.11.0)
@@ -309,6 +318,28 @@ importers:
       prettier:
         specifier: ^3.0.3
         version: 3.0.3
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/validation:
+    dependencies:
+      zod:
+        specifier: ^3.22.2
+        version: 3.22.2
+    devDependencies:
+      '@promofinder/eslint-config':
+        specifier: 0.2.0
+        version: link:../../tooling/eslint
+      '@promofinder/prettier-config':
+        specifier: ^0.1.0
+        version: link:../../tooling/prettier
+      '@promofinder/tsconfig':
+        specifier: ^0.1.0
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: ^8.50.0
+        version: 8.50.0
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -3962,6 +3993,10 @@ packages:
   /@types/tinycolor2@1.4.3:
     resolution: {integrity: sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==}
     dev: false
+
+  /@types/uuid@9.0.6:
+    resolution: {integrity: sha512-BT2Krtx4xaO6iwzwMFUYvWBWkV2pr37zD68Vmp1CDV196MzczBRxuEpD6Pr395HAgebC/co7hOphs53r8V7jew==}
+    dev: true
 
   /@types/yargs-parser@21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
@@ -11533,6 +11568,11 @@ packages:
 
   /uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
     dev: false
 

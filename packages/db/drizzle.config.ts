@@ -1,16 +1,17 @@
 import * as dotenv from "dotenv";
 import type { Config } from "drizzle-kit";
-import { env } from './env.mjs';
 
 dotenv.config({
   path: "../../.env",
 });
 
+if (!process.env.DATABASE_URL) throw new Error("Invalid environment variables");
+
 export default {
   schema: "./schema",
   driver: "mysql2",
   dbCredentials: {
-    connectionString: env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL,
   },
   tablesFilter: ["promofinder_*"],
 } satisfies Config;
