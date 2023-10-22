@@ -1,4 +1,4 @@
-import { grass, indigo, orange, sand, tomato, yellow } from "@radix-ui/colors";
+import { grass, indigo, orange, sand, tomato, yellow, whiteA, blackA } from "@radix-ui/colors";
 
 export const colors = {
   primary: {
@@ -89,5 +89,35 @@ export const colors = {
     10: yellow.yellow10,
     11: yellow.yellow11,
     12: yellow.yellow12,
+  },
+
+  white: {
+    1: whiteA.whiteA1,
+    2: whiteA.whiteA2,
+    3: whiteA.whiteA3,
+    4: whiteA.whiteA4,
+    5: whiteA.whiteA5,
+    6: whiteA.whiteA6,
+    7: whiteA.whiteA7,
+    8: whiteA.whiteA8,
+    9: whiteA.whiteA9,
+    10: whiteA.whiteA10,
+    11: whiteA.whiteA11,
+    12: whiteA.whiteA12,
+  },
+
+  black: {
+    1: blackA.blackA1,
+    2: blackA.blackA2,
+    3: blackA.blackA3,
+    4: blackA.blackA4,
+    5: blackA.blackA5,
+    6: blackA.blackA6,
+    7: blackA.blackA7,
+    8: blackA.blackA8,
+    9: blackA.blackA9,
+    10: blackA.blackA10,
+    11: blackA.blackA11,
+    12: blackA.blackA12,
   },
 };

@@ -64,5 +64,9 @@ export const storeRouter = createTRPCRouter({
         where: (storePermissions, { eq }) =>
           eq(storePermissions.userId, ctx.auth.userId),
       });
+
+      if (!permissions) {
+        return null;
+      }
     }),
 });
