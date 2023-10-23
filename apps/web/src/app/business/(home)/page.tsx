@@ -17,7 +17,7 @@ export default function Page() {
     <MaxWidthWrapper className="py-20">
       <div className="mb-10 flex justify-between">
         <h1 className="text-2xl font-medium text-neutral-12">Suas lojas</h1>
-        <ButtonLink href="/store/create">
+        <ButtonLink href="/business/store/create">
           <PlusIcon /> ADICIONAR LOJA
         </ButtonLink>
       </div>
