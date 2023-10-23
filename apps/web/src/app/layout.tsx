@@ -41,7 +41,13 @@ export default function RootLayout({
   return (
     <ClerkReactProvider>
       <html lang="pt-BR">
-        <body className={["font-sans", fontSans.variable].join(" ")}>
+        <body
+          className={[
+            "font-sans",
+            fontSans.variable,
+            "min-h-screen bg-gradient-to-b from-neutral-1 to-primary-2",
+          ].join(" ")}
+        >
           <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
         </body>
       </html>

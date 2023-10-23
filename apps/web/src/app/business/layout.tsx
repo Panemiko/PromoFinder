@@ -7,7 +7,7 @@ import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div>
-      <header className="border-b border-b-neutral-6 py-5">
+      <header className="py-5">
         <MaxWidthWrapper className="flex justify-between">
           <BrandLogo className="max-w-[180px]" />
           <UserButton />
