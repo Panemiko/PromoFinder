@@ -16,6 +16,7 @@ export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(),
     CLERK_SECRET_KEY: z.string(),
+    UPLOADTHING_SECRET: z.string().startsWith("sk_live_"),
   },
   /**
    * Specify your client-side environment variables schema here.
@@ -34,7 +35,7 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+    UPLOADTHING_SECRET: process.env.UPLOADTHING_SECRET,
   },
   skipValidation:
     !!process.env.CI ||

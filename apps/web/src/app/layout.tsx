@@ -4,9 +4,13 @@ import { headers } from "next/headers";
 
 import "@/styles/globals.css";
 
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+
 import { ClerkReactProvider } from "@/components/clerk-provider";
 import { TRPCReactProvider } from "@/components/trpc-provider";
 import { site } from "@/config/site";
+import { ourFileRouter } from "./api/uploadthing/core";
 
 export const dynamic = "force-dynamic";
 
@@ -48,6 +52,15 @@ export default function RootLayout({
             "min-h-screen bg-gradient-to-b from-neutral-1 to-primary-2",
           ].join(" ")}
         >
+          <NextSSRPlugin
+            /**
+             * The `extractRouterConfig` will extract **only** the route configs
+             * from the router to prevent additional information from being
+             * leaked to the client. The data passed to the client is the same
+             * as if you were to fetch `/api/uploadthing` directly.
+             */
+            routerConfig={extractRouterConfig(ourFileRouter)}
+          />
           <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
         </body>
       </html>
