@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <LayoutTemplate storeName={storeName}>
       <MaxWidthWrapper className="flex py-14">
         <aside>
-          <ul className="flex h-[calc(100vh-200px)] flex-col justify-between gap-1">
+          <ul className="flex flex-col gap-1">
             <div>
               <li>
                 <NextLink
@@ -51,19 +51,19 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div>
               <li>
                 <NextLink
-                  className="flex w-44 items-center rounded-sm px-5 py-2 pl-11 text-primary-11 transition-colors hover:bg-primary-4 active:bg-primary-5"
-                  href="/business/store/1/settings"
-                >
-                  Seu plano
-                </NextLink>
-              </li>
-              <li>
-                <NextLink
                   className="flex w-44 items-center gap-2 rounded-sm px-5 py-2 text-neutral-11 transition-colors hover:bg-neutral-4 hover:text-neutral-12 active:bg-neutral-5"
                   href="/business/store/1/settings"
                 >
                   <SettingsIcon className="h-4 w-4" />
                   Configurações
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  className="flex w-44 items-center rounded-sm px-5 py-2 pl-11 text-primary-11 transition-colors hover:bg-primary-4 active:bg-primary-5"
+                  href="/business/store/1/settings"
+                >
+                  Seu plano
                 </NextLink>
               </li>
             </div>
