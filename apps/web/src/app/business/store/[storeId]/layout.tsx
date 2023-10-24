@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div>
               <li>
                 <NextLink
-                  className="flex w-44 items-center rounded-sm px-5 py-2 pl-11 text-primary-11 transition-colors hover:bg-primary-4 hover:text-primary-12 active:bg-primary-5"
+                  className="flex w-44 items-center rounded-sm px-5 py-2 pl-11 text-primary-11 transition-colors hover:bg-primary-4 active:bg-primary-5"
                   href="/business/store/1/settings"
                 >
                   Seu plano
@@ -69,7 +69,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </div>
           </ul>
         </aside>
-        <div className="w-full">{children}</div>
+        <div className="w-full pl-10">{children}</div>
       </MaxWidthWrapper>
     </LayoutTemplate>
   );

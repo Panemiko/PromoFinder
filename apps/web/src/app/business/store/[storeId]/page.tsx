@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="space-y-10 pl-10">
+    <div className="space-y-10">
       <div>
         <h1 className="text-2xl text-neutral-12">
           Bem vindo, <span className="font-semibold">Luiz</span>
