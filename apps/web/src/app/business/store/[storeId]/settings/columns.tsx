@@ -2,98 +2,41 @@
 
 import type { ColumnDef } from "@tanstack/react-table";
 
-import { Checkbox } from "@/components/ui/checkbox";
-
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export interface Product {
+export interface User {
   id: string;
   name: string;
-  status: "active" | "evaluating" | "programmed";
-  eanCode: string;
-  price: string;
-  promotionPrice: string;
-  dateStart: Date;
-  dateEnd: Date;
+  role: "master" | "admin" | "member";
+  email: string;
 }
 
-export const columns: ColumnDef<Product>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Selecionar todos"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Selecionar linha"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
+export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "name",
     header: "Nome",
   },
   {
-    accessorKey: "status",
-    header: "Estado",
+    accessorKey: "role",
+    header: "Cargo",
     cell({ row }) {
-      const value = row.getValue("status");
+      const value = row.getValue("role");
 
-      if (value === "active") {
-        return "Ativo";
+      if (value === "master") {
+        return "Dono";
       }
 
-      if (value === "evaluating") {
-        return "Avaliando";
+      if (value === "admin") {
+        return "Administrador";
       }
 
-      if (value === "programmed") {
-        return "Programado";
+      if (value === "member") {
+        return "Membro";
       }
     },
   },
   {
-    accessorKey: "eanCode",
-    header: "Código EAN",
-  },
-  {
-    accessorKey: "price",
-    header: "Preço",
-    cell({ row }) {
-      const value: string = row.getValue("promotionPrice");
-      return `R$${value}`;
-    },
-  },
-  {
-    accessorKey: "promotionPrice",
-    header: "Preço promocional",
-    cell({ row }) {
-      const value: string = row.getValue("promotionPrice");
-      return `R$${value}`;
-    },
-  },
-  {
-    accessorKey: "dateStart",
-    header: "Início",
-    cell({ row }) {
-      const value: Date = row.getValue("dateStart");
-      return `${value.getDate()}/${value.getMonth()}/${value.getFullYear()}`;
-    },
-  },
-  {
-    accessorKey: "dateEnd",
-    header: "Fim",
-    cell({ row }) {
-      const value: Date = row.getValue("dateEnd");
-      return `${value.getDate()}/${value.getMonth()}/${value.getFullYear()}`;
-    },
+    accessorKey: "email",
+    header: "E-mail",
   },
 ];
