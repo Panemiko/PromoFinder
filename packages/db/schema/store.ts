@@ -12,8 +12,8 @@ export const stores = mySqlTable("stores", {
     .notNull(),
   updatedAt: timestamp("updated_at").onUpdateNow(),
   name: varchar("name", { length: 256 }).notNull(),
-  bannerId: varchar("banner_id", { length: 256 }),
-  avatarId: varchar("avatar_id", { length: 256 }).notNull(),
+  bannerKey: varchar("banner_key", { length: 256 }),
+  avatarKey: varchar("avatar_key", { length: 256 }).notNull(),
 });
 
 export const storesRelations = relations(stores, ({ many }) => ({

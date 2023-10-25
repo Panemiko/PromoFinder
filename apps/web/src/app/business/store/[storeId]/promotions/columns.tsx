@@ -17,6 +17,14 @@ export interface Product {
   dateEnd: Date;
 }
 
+function parseDate(date: Date) {
+  return `${date.getDate().toLocaleString("pt-BR", {
+    minimumIntegerDigits: 2,
+  })}/${(date.getMonth() + 1).toLocaleString("pt-BR", {
+    minimumIntegerDigits: 2,
+  })}/${date.getFullYear()}`;
+}
+
 export const columns: ColumnDef<Product>[] = [
   {
     id: "select",
@@ -85,7 +93,7 @@ export const columns: ColumnDef<Product>[] = [
     header: "Início",
     cell({ row }) {
       const value: Date = row.getValue("dateStart");
-      return `${value.getDate()}/${value.getMonth()}/${value.getFullYear()}`;
+      return parseDate(value);
     },
   },
   {
@@ -93,7 +101,7 @@ export const columns: ColumnDef<Product>[] = [
     header: "Fim",
     cell({ row }) {
       const value: Date = row.getValue("dateEnd");
-      return `${value.getDate()}/${value.getMonth()}/${value.getFullYear()}`;
+      return parseDate(value);
     },
   },
 ];
