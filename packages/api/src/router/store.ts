@@ -14,22 +14,30 @@ import {
   timeSchema,
 } from "@promofinder/validation";
 
-import { getFirstImageUrl } from "../utils/utapi";
+import { getFirstImageUrl } from "../utils";
 
 const storeOutputSchema = z
   .object({
     id: modelIdSchema,
     name: storeNameSchema,
     createdAt: timeSchema,
-    updatedAt: timeSchema.optional(),
-    bannerKey: imageKeySchema.optional(),
+    updatedAt: timeSchema.nullable(),
+    bannerKey: imageKeySchema.nullable(),
     avatarKey: imageKeySchema,
   })
-  .transform(async (input) => ({
-    bannerUrl: input.bannerKey ? await getFirstImageUrl(input.bannerKey) : null,
-    avatarUrl: input.avatarKey ? await getFirstImageUrl(input.avatarKey) : null,
-    ...input,
-  }));
+  .transform(async (input) => {
+    if (!input) return null;
+    return {
+      bannerUrl: input.bannerKey
+        ? await getFirstImageUrl(input.bannerKey)
+        : null,
+      avatarUrl: input.avatarKey
+        ? await getFirstImageUrl(input.avatarKey)
+        : null,
+      ...input,
+    };
+  })
+  .nullable();
 
 export const storeRouter = createTRPCRouter({
   create: protectedProcedure
@@ -37,15 +45,15 @@ export const storeRouter = createTRPCRouter({
     .input(
       z.object({
         name: storeNameSchema,
+        avatarKey: imageKeySchema,
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      const avatarKey = "a";
       const storeId = generateId();
 
       await ctx.db.insert(schema.stores).values({
         id: storeId,
-        avatarKey,
+        avatarKey: input.avatarKey,
         name: input.name,
       });
 
@@ -61,10 +69,12 @@ export const storeRouter = createTRPCRouter({
         where: (stores, { eq }) => eq(stores.id, storeId),
       });
 
+      if (!store) return null;
+
       return store;
     }),
   byCurrentUser: protectedProcedure
-    .output(storeOutputSchema.array())
+    .output(storeOutputSchema.array().nullable())
     .query(async ({ ctx }) => {
       // Get the permissions of the current user
       const permissions = await ctx.db.query.storePermissions.findMany({
@@ -82,8 +92,8 @@ export const storeRouter = createTRPCRouter({
       return permissions.map((permission) => permission.store);
     }),
   byId: publicProcedure
-    .input(z.object({ storeId: modelIdSchema }))
     .output(storeOutputSchema)
+    .input(z.object({ storeId: modelIdSchema }))
     .query(async ({ ctx, input }) => {
       const store = await ctx.db.query.stores.findFirst({
         where: (stores, { eq }) => eq(stores.id, input.storeId),

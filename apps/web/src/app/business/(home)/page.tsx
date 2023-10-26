@@ -11,8 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { serverApi } from "@/lib/server";
 
-export default function Page() {
+export default async function Page() {
+  const userStores = serverApi.store.byCurrentUser.query()
+
   return (
     <MaxWidthWrapper className="py-20">
       <div className="mb-10 flex justify-between">
@@ -23,6 +26,7 @@ export default function Page() {
       </div>
       <div>
         <ul className="grid grid-cols-3 gap-5">
+          {}
           <li>
             <NextLink href="/store/iddaloja">
               <Card>

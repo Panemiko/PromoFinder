@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { ButtonLink } from "@/components/ui/button-link";
+import { serverApi } from "@/lib/server";
 import type { User } from "./columns";
 import { columns } from "./columns";
 import { UsersTable } from "./data-table";
-import { StoreSettingsForm } from "./form";
+import { StoreSettingsForm } from "./store-form";
 import { AddUserForm } from "./users-form";
-
-const store = {
-  name: "Nome da loja",
-  avatarId: "aaaa",
-};
 
 const users: User[] = [
   {
@@ -57,7 +54,19 @@ export const metadata: Metadata = {
   title: "Configurações",
 };
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: { storeId: string };
+}) {
+  const store = await serverApi.store.byId
+    .query({
+      storeId: params.storeId,
+    })
+    .catch();
+
+  if (!store) return notFound();
+
   return (
     <div className="space-y-20">
       <div className="space-y-10">
