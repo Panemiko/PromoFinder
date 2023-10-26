@@ -7,6 +7,9 @@ import { generateId } from "../utils";
 
 import "@promofinder/validation";
 
+import { TRPCError } from "@trpc/server";
+
+import type { StoresSelect } from "@promofinder/db/schema/store";
 import {
   imageKeySchema,
   modelIdSchema,
@@ -26,7 +29,6 @@ const storeOutputSchema = z
     avatarKey: imageKeySchema,
   })
   .transform(async (input) => {
-    if (!input) return null;
     return {
       bannerUrl: input.bannerKey
         ? await getFirstImageUrl(input.bannerKey)
@@ -36,8 +38,7 @@ const storeOutputSchema = z
         : null,
       ...input,
     };
-  })
-  .nullable();
+  });
 
 export const storeRouter = createTRPCRouter({
   create: protectedProcedure
@@ -69,7 +70,7 @@ export const storeRouter = createTRPCRouter({
         where: (stores, { eq }) => eq(stores.id, storeId),
       });
 
-      if (!store) return null;
+      if (!store) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
 
       return store;
     }),
@@ -89,10 +90,13 @@ export const storeRouter = createTRPCRouter({
         return null;
       }
 
-      return permissions.map((permission) => permission.store);
+      const stores = permissions.map((permission) => permission.store);
+
+      // static definition because of the filtering
+      return stores.filter((store) => store !== null) as StoresSelect[];
     }),
   byId: publicProcedure
-    .output(storeOutputSchema)
+    .output(storeOutputSchema.nullable())
     .input(z.object({ storeId: modelIdSchema }))
     .query(async ({ ctx, input }) => {
       const store = await ctx.db.query.stores.findFirst({

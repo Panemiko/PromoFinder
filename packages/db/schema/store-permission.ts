@@ -14,13 +14,14 @@ export const storePermissions = mySqlTable("store_permissions", {
   userId: varchar("user_id", { length: 256 }),
   role: mysqlEnum("role", ["master", "admin", "promoter", "user"]),
   enabled: boolean("enabled"),
+  storeId: varchar("store_id", { length: 256 }),
 });
 
 export const storePermissionsRelations = relations(
   storePermissions,
   ({ one }) => ({
     store: one(stores, {
-      fields: [storePermissions.userId],
+      fields: [storePermissions.storeId],
       references: [stores.id],
     }),
   }),

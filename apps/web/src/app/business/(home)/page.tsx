@@ -14,70 +14,40 @@ import {
 import { serverApi } from "@/lib/server";
 
 export default async function Page() {
-  const userStores = serverApi.store.byCurrentUser.query()
+  const userStores = await serverApi.store.byCurrentUser.query();
 
   return (
     <MaxWidthWrapper className="py-20">
       <div className="mb-10 flex justify-between">
         <h1 className="text-2xl font-medium text-neutral-12">Suas lojas</h1>
-        <ButtonLink href="/business/store/create">
-          <PlusIcon /> ADICIONAR LOJA
-        </ButtonLink>
       </div>
       <div>
         <ul className="grid grid-cols-3 gap-5">
-          {}
-          <li>
-            <NextLink href="/store/iddaloja">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Nome da loja 1</CardTitle>
-                  <CardDescription>
-                    10 promoções ativas - 2 anúncios
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <Badge variant="outline">FREE</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </NextLink>
-          </li>
-          <li>
-            <NextLink href="/store/iddaloja">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Nome da loja 2</CardTitle>
-                  <CardDescription>
-                    10 promoções ativas - 2 anúncios
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <Badge variant="outline">FREE</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </NextLink>
-          </li>
-          <li>
-            <NextLink href="/store/iddaloja">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Nome da loja 3</CardTitle>
-                  <CardDescription>
-                    10 promoções ativas - 2 anúncios
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <Badge variant="outline">FREE</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </NextLink>
-          </li>
+          {userStores ? (
+            userStores.map((store) => (
+              <li key={store.id}>
+                <NextLink href={`/business/store/${store.id}`}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{store.name}</CardTitle>
+                      <CardDescription>
+                        10 promoções ativas - 2 anúncios
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div>
+                        <Badge variant="outline">FREE</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </NextLink>
+              </li>
+            ))
+          ) : (
+            <span className="col-span-3 text-center text-neutral-11">
+              Nenhuma loja encontrada
+            </span>
+          )}
         </ul>
       </div>
     </MaxWidthWrapper>
