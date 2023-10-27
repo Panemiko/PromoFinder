@@ -27,6 +27,148 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  apps/business:
+    dependencies:
+      '@clerk/localizations':
+        specifier: ^1.26.6
+        version: 1.26.6(react@18.2.0)
+      '@clerk/nextjs':
+        specifier: ^4.25.6
+        version: 4.25.6(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
+      '@hookform/resolvers':
+        specifier: ^3.3.2
+        version: 3.3.2(react-hook-form@7.47.0)
+      '@promofinder/api':
+        specifier: ^0.1.0
+        version: link:../../packages/api
+      '@promofinder/db':
+        specifier: ^0.1.0
+        version: link:../../packages/db
+      '@promofinder/validation':
+        specifier: ^0.1.0
+        version: link:../../packages/validation
+      '@radix-ui/react-checkbox':
+        specifier: ^1.0.4
+        version: 1.0.4(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-dialog':
+        specifier: ^1.0.5
+        version: 1.0.5(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-label':
+        specifier: ^2.0.2
+        version: 2.0.2(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-slot':
+        specifier: ^1.0.2
+        version: 1.0.2(@types/react@18.2.25)(react@18.2.0)
+      '@t3-oss/env-nextjs':
+        specifier: ^0.7.0
+        version: 0.7.0(typescript@5.2.2)(zod@3.22.4)
+      '@tanstack/react-query':
+        specifier: ^4.35.7
+        version: 4.35.7(react-dom@18.2.0)(react-native@0.72.5)(react@18.2.0)
+      '@tanstack/react-query-devtools':
+        specifier: ^4.35.7
+        version: 4.35.7(@tanstack/react-query@4.35.7)(react-dom@18.2.0)(react@18.2.0)
+      '@tanstack/react-query-next-experimental':
+        specifier: 5.0.0-alpha.80
+        version: 5.0.0-alpha.80(@tanstack/react-query@4.35.7)(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
+      '@tanstack/react-table':
+        specifier: ^8.10.7
+        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
+      '@trpc/client':
+        specifier: ^10.40.0
+        version: 10.40.0(@trpc/server@10.40.0)
+      '@trpc/next':
+        specifier: ^10.40.0
+        version: 10.40.0(@tanstack/react-query@4.35.7)(@trpc/client@10.40.0)(@trpc/react-query@10.40.0)(@trpc/server@10.40.0)(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
+      '@trpc/react-query':
+        specifier: ^10.40.0
+        version: 10.40.0(@tanstack/react-query@4.35.7)(@trpc/client@10.40.0)(@trpc/server@10.40.0)(react-dom@18.2.0)(react@18.2.0)
+      '@trpc/server':
+        specifier: ^10.40.0
+        version: 10.40.0
+      '@uploadthing/react':
+        specifier: ^5.7.0
+        version: 5.7.0(next@13.5.4)(react@18.2.0)(uploadthing@5.7.2)(zod@3.22.4)
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.0.0
+        version: 2.0.0
+      lucide-react:
+        specifier: ^0.288.0
+        version: 0.288.0(react@18.2.0)
+      next:
+        specifier: ^13.5.4
+        version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-dropzone:
+        specifier: ^14.2.3
+        version: 14.2.3(react@18.2.0)
+      react-hook-form:
+        specifier: ^7.47.0
+        version: 7.47.0(react@18.2.0)
+      superjson:
+        specifier: 1.13.1
+        version: 1.13.1
+      tailwind-merge:
+        specifier: ^1.14.0
+        version: 1.14.0
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.3.2)
+      uploadthing:
+        specifier: ^5.7.2
+        version: 5.7.2(zod@3.22.4)
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+      zod:
+        specifier: ^3.22.2
+        version: 3.22.4
+    devDependencies:
+      '@promofinder/eslint-config':
+        specifier: 0.2.0
+        version: link:../../tooling/eslint
+      '@promofinder/prettier-config':
+        specifier: 0.1.0
+        version: link:../../tooling/prettier
+      '@promofinder/tailwind-config':
+        specifier: 0.1.0
+        version: link:../../tooling/tailwind
+      '@promofinder/tsconfig':
+        specifier: 0.1.0
+        version: link:../../tooling/typescript
+      '@types/node':
+        specifier: ^18.17.19
+        version: 18.17.19
+      '@types/react':
+        specifier: ^18.2.25
+        version: 18.2.25
+      '@types/react-dom':
+        specifier: ^18.2.10
+        version: 18.2.10
+      dotenv-cli:
+        specifier: ^7.3.0
+        version: 7.3.0
+      eslint:
+        specifier: ^8.50.0
+        version: 8.50.0
+      prettier:
+        specifier: ^3.0.3
+        version: 3.0.3
+      tailwindcss:
+        specifier: 3.3.2
+        version: 3.3.2
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   apps/mobile:
     dependencies:
       '@expo/metro-config':
@@ -136,68 +278,11 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  apps/web:
+  apps/www:
     dependencies:
-      '@clerk/localizations':
-        specifier: ^1.26.6
-        version: 1.26.6(react@18.2.0)
-      '@clerk/nextjs':
-        specifier: ^4.25.6
-        version: 4.25.6(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
-      '@hookform/resolvers':
-        specifier: ^3.3.2
-        version: 3.3.2(react-hook-form@7.47.0)
-      '@promofinder/api':
-        specifier: ^0.1.0
-        version: link:../../packages/api
-      '@promofinder/db':
-        specifier: ^0.1.0
-        version: link:../../packages/db
-      '@promofinder/validation':
-        specifier: ^0.1.0
-        version: link:../../packages/validation
-      '@radix-ui/react-checkbox':
-        specifier: ^1.0.4
-        version: 1.0.4(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog':
-        specifier: ^1.0.5
-        version: 1.0.5(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-label':
-        specifier: ^2.0.2
-        version: 2.0.2(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/react@18.2.25)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.2.2)(zod@3.22.2)
-      '@tanstack/react-query':
-        specifier: ^4.35.7
-        version: 4.35.7(react-dom@18.2.0)(react-native@0.72.5)(react@18.2.0)
-      '@tanstack/react-query-devtools':
-        specifier: ^4.35.7
-        version: 4.35.7(@tanstack/react-query@4.35.7)(react-dom@18.2.0)(react@18.2.0)
-      '@tanstack/react-query-next-experimental':
-        specifier: 5.0.0-alpha.80
-        version: 5.0.0-alpha.80(@tanstack/react-query@4.35.7)(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
-      '@tanstack/react-table':
-        specifier: ^8.10.7
-        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/client':
-        specifier: ^10.40.0
-        version: 10.40.0(@trpc/server@10.40.0)
-      '@trpc/next':
-        specifier: ^10.40.0
-        version: 10.40.0(@tanstack/react-query@4.35.7)(@trpc/client@10.40.0)(@trpc/react-query@10.40.0)(@trpc/server@10.40.0)(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/react-query':
-        specifier: ^10.40.0
-        version: 10.40.0(@tanstack/react-query@4.35.7)(@trpc/client@10.40.0)(@trpc/server@10.40.0)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/server':
-        specifier: ^10.40.0
-        version: 10.40.0
-      '@uploadthing/react':
-        specifier: ^5.7.0
-        version: 5.7.0(next@13.5.4)(react@18.2.0)(uploadthing@5.7.2)(zod@3.22.2)
+        version: 0.7.0(typescript@5.2.2)(zod@3.22.4)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -216,30 +301,15 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
-      react-dropzone:
-        specifier: ^14.2.3
-        version: 14.2.3(react@18.2.0)
-      react-hook-form:
-        specifier: ^7.47.0
-        version: 7.47.0(react@18.2.0)
-      superjson:
-        specifier: 1.13.1
-        version: 1.13.1
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.3.2)
-      uploadthing:
-        specifier: ^5.7.2
-        version: 5.7.2(zod@3.22.2)
-      uuid:
-        specifier: ^9.0.1
-        version: 9.0.1
       zod:
         specifier: ^3.22.2
-        version: 3.22.2
+        version: 3.22.4
     devDependencies:
       '@promofinder/eslint-config':
         specifier: 0.2.0
@@ -1863,7 +1933,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: false
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -2514,7 +2583,7 @@ packages:
     resolution: {integrity: sha512-8ciyz+yIDih6zCNMWK0IyEv411W7vej/TaWIFGarogPVbFokXrUKr0aKoQG1RU1SLlY4eUpHakbIzqog+rhJdQ==}
     hasBin: true
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
       '@expo/code-signing-certificates': 0.0.5
       '@expo/config': 8.1.2
       '@expo/config-plugins': 7.2.5
@@ -2629,7 +2698,7 @@ packages:
       resolve-from: 5.0.0
       semver: 7.5.3
       slugify: 1.6.6
-      sucrase: 3.32.0
+      sucrase: 3.34.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2914,7 +2983,7 @@ packages:
     dependencies:
       '@jest/fake-timers': 29.5.0
       '@jest/types': 29.5.0
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       jest-mock: 29.5.0
     dev: false
 
@@ -2924,7 +2993,7 @@ packages:
     dependencies:
       '@jest/types': 29.5.0
       '@sinonjs/fake-timers': 10.0.2
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       jest-message-util: 29.5.0
       jest-mock: 29.5.0
       jest-util: 29.5.0
@@ -2943,7 +3012,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       '@types/yargs': 15.0.15
       chalk: 4.1.2
     dev: false
@@ -2954,7 +3023,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       '@types/yargs': 16.0.5
       chalk: 4.1.2
     dev: false
@@ -2966,7 +3035,7 @@ packages:
       '@jest/schemas': 29.4.3
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       '@types/yargs': 17.0.24
       chalk: 4.1.2
     dev: false
@@ -3207,7 +3276,7 @@ packages:
     resolution: {integrity: sha512-coUfuoMeIB7B8/NMekxaDzLhaYmp0HZNPEjYRm9goRou8UZIC3z21s0sL9AWoCw4EG876QyO3kYrc61WNF9B/w==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /@peculiar/webcrypto@1.4.1:
@@ -3217,7 +3286,7 @@ packages:
       '@peculiar/asn1-schema': 2.3.8
       '@peculiar/json-schema': 1.1.12
       pvtsutils: 1.3.5
-      tslib: 2.4.1
+      tslib: 2.6.2
       webcrypto-core: 1.7.7
     dev: false
 
@@ -3269,7 +3338,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
       react: 18.2.0
     dev: false
 
@@ -3502,7 +3571,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
       '@radix-ui/react-compose-refs': 1.0.0(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -3993,7 +4062,7 @@ packages:
       defer-to-connect: 1.1.3
     dev: false
 
-  /@t3-oss/env-core@0.7.0(typescript@5.2.2)(zod@3.22.2):
+  /@t3-oss/env-core@0.7.0(typescript@5.2.2)(zod@3.22.4):
     resolution: {integrity: sha512-cgunN82CqgQOOyuMOK/bGtujX5/ooXQTwGMJVWI6mCowq6WE5EgRLOqF/DRcrElI0gSFGA9i9GrxzCnk73HZLQ==}
     peerDependencies:
       typescript: '>=4.7.2'
@@ -4003,10 +4072,10 @@ packages:
         optional: true
     dependencies:
       typescript: 5.2.2
-      zod: 3.22.2
+      zod: 3.22.4
     dev: false
 
-  /@t3-oss/env-nextjs@0.7.0(typescript@5.2.2)(zod@3.22.2):
+  /@t3-oss/env-nextjs@0.7.0(typescript@5.2.2)(zod@3.22.4):
     resolution: {integrity: sha512-rjQIt6P3tac2eRx4BNQLNaJ+AIb2P8wXw4uFvYbEekqMGShikkUALnX3hUn1twYiGVGHXRm6UbU+LqtjIktuGg==}
     peerDependencies:
       typescript: '>=4.7.2'
@@ -4015,9 +4084,9 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@t3-oss/env-core': 0.7.0(typescript@5.2.2)(zod@3.22.2)
+      '@t3-oss/env-core': 0.7.0(typescript@5.2.2)(zod@3.22.4)
       typescript: 5.2.2
-      zod: 3.22.2
+      zod: 3.22.4
     dev: false
 
   /@tanstack/match-sorter-utils@8.8.4:
@@ -4290,7 +4359,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
     dev: false
 
   /@types/hammerjs@2.0.41:
@@ -4339,7 +4408,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
     dev: false
 
   /@types/mime@1.3.4:
@@ -4367,12 +4436,6 @@ packages:
 
   /@types/node@18.17.19:
     resolution: {integrity: sha512-+pMhShR3Or5GR0/sp4Da7FnhVmTalWm81M6MkEldbwjETSaPalw138Z4KdpQaistvqQxLB7Cy4xwYdxpbSOs9Q==}
-
-  /@types/node@20.8.9:
-    resolution: {integrity: sha512-UzykFsT3FhHb1h7yD4CA4YhBHq545JC0YnEz41xkipN88eKQtL6rSgocL5tbAP6Ola9Izm/Aw4Ora8He4x0BHg==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: false
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -4404,7 +4467,7 @@ packages:
   /@types/responselike@1.0.2:
     resolution: {integrity: sha512-/4YQT5Kp6HxUDb4yhRkm0bJ7TbjvTddqX7PZ5hz6qV3pxSo72f/6YPRo+Mu2DU307tm9IioO69l7uAwn5XNcFA==}
     dependencies:
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
     dev: false
 
   /@types/scheduler@0.16.3:
@@ -4440,7 +4503,7 @@ packages:
   /@types/through@0.0.32:
     resolution: {integrity: sha512-7XsfXIsjdfJM2wFDRAtEWp3zb2aVPk5QeyZxGlVK57q4u26DczMHhJmlhr0Jqv0THwxam/L8REXkj8M2I/lcvw==}
     dependencies:
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
     dev: false
 
   /@types/tinycolor2@1.4.5:
@@ -4608,7 +4671,7 @@ packages:
     resolution: {integrity: sha512-UDySsPbdi7wp52WG7mp5CiZwaTvokDubqhm1xhFm73Bqhp0PsGbwSSF5PdCXH4fe8Y4EKGrMyWQ4i1fF9+DVVQ==}
     dev: false
 
-  /@uploadthing/react@5.7.0(next@13.5.4)(react@18.2.0)(uploadthing@5.7.2)(zod@3.22.2):
+  /@uploadthing/react@5.7.0(next@13.5.4)(react@18.2.0)(uploadthing@5.7.2)(zod@3.22.4):
     resolution: {integrity: sha512-rSBzoC2eMRM2d6Mpis6RXfo1Y5JsV7oJanTmaVdltFLRxbO/4lwK1kvHM4qwDUvn01UpxBtcVayimMBXNJ0V8Q==}
     peerDependencies:
       next: '*'
@@ -4618,19 +4681,19 @@ packages:
       next:
         optional: true
     dependencies:
-      '@uploadthing/shared': 5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.2)
+      '@uploadthing/shared': 5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.4)
       attr-accept: 2.2.2
       file-selector: 0.6.0
       next: 13.5.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       tailwind-merge: 1.14.0
-      uploadthing: 5.7.2(zod@3.22.2)
+      uploadthing: 5.7.2(zod@3.22.4)
     transitivePeerDependencies:
       - '@uploadthing/mime-types'
       - zod
     dev: false
 
-  /@uploadthing/shared@5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.2):
+  /@uploadthing/shared@5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.4):
     resolution: {integrity: sha512-b6Nr0YzV9iinVK9OydBVQH0xPQEPgw7ty/q9aQbEnRQedc4TqARaYQEoMvTu7bRuiK7MIpKodzVTQdFKHhMLTg==}
     peerDependencies:
       '@uploadthing/mime-types': ^0.2.0
@@ -4640,7 +4703,7 @@ packages:
         optional: true
     dependencies:
       '@uploadthing/mime-types': 0.2.1
-      zod: 3.22.2
+      zod: 3.22.4
     dev: false
 
   /@urql/core@2.3.6(graphql@15.8.0):
@@ -5252,7 +5315,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001538
+      caniuse-lite: 1.0.30001554
       electron-to-chromium: 1.4.490
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
@@ -5425,10 +5488,10 @@ packages:
 
   /caniuse-lite@1.0.30001538:
     resolution: {integrity: sha512-HWJnhnID+0YMtGlzcp3T9drmBJUVDchPJ08tpUGFLs9CYlwWPH2uLgpHn8fND5pCgXVtnGS3H4QR9XLMHVNkHw==}
+    dev: false
 
   /caniuse-lite@1.0.30001554:
     resolution: {integrity: sha512-A2E3U//MBwbJVzebddm1YfNp7Nud5Ip+IPn4BozBmn4KqVX7AvluoIDFWjsv5OkGnKUXQVmMSoMKLa3ScCblcQ==}
-    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -6146,7 +6209,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /dotenv-cli@7.3.0:
@@ -6766,7 +6829,7 @@ packages:
       file-entry-cache: 6.0.1
       find-up: 5.0.0
       glob-parent: 6.0.2
-      globals: 13.20.0
+      globals: 13.23.0
       graphemer: 1.4.0
       ignore: 5.2.4
       imurmurhash: 0.1.4
@@ -7536,12 +7599,6 @@ packages:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
 
-  /globals@13.20.0:
-    resolution: {integrity: sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      type-fest: 0.20.2
-
   /globals@13.23.0:
     resolution: {integrity: sha512-XAmF0RjlrjY23MA51q3HltdlGxUpXPvg0GioKiD9X6HD28iMjo2dKC8Vqwm7lne4GNr78+RHTfliktR6ZH09wA==}
     engines: {node: '>=8'}
@@ -8285,7 +8342,7 @@ packages:
       '@jest/environment': 29.5.0
       '@jest/fake-timers': 29.5.0
       '@jest/types': 29.5.0
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       jest-mock: 29.5.0
       jest-util: 29.5.0
     dev: false
@@ -8315,7 +8372,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.5.0
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       jest-util: 29.5.0
     dev: false
 
@@ -8329,7 +8386,7 @@ packages:
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -8341,7 +8398,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.5.0
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -8364,7 +8421,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.8.9
+      '@types/node': 18.17.19
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: false
@@ -8772,7 +8829,7 @@ packages:
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /lowercase-keys@1.0.1:
@@ -9088,7 +9145,7 @@ packages:
     resolution: {integrity: sha512-XKahvB+iuYJSCr3QqCpROli4B4zASAYpkK+j3a0CJmokxCDNbgyI4Fp88uIL6rNaZfN0Mv35S0b99SdFXIfHjg==}
     engines: {node: '>=16'}
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
       react-refresh: 0.4.3
     dev: false
 
@@ -9515,7 +9572,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /nocache@3.0.4:
@@ -10505,7 +10562,7 @@ packages:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
       invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.2.0
@@ -10807,7 +10864,7 @@ packages:
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.23.1
+      '@babel/runtime': 7.23.2
 
   /regexp.prototype.flags@1.5.0:
     resolution: {integrity: sha512-0SutC3pNudRKgquxGoRGIz946MZVHqbNfPjBdxeOhBrdgDKlRoXmYLQN9xRbrR09ZXWeGAdPuif7egofn6v5LA==}
@@ -11282,7 +11339,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /snakecase-keys@3.2.1:
@@ -12129,10 +12186,6 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: false
 
-  /undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-    dev: false
-
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
@@ -12215,12 +12268,12 @@ packages:
       registry-url: 3.1.0
     dev: false
 
-  /uploadthing@5.7.2(zod@3.22.2):
+  /uploadthing@5.7.2(zod@3.22.4):
     resolution: {integrity: sha512-VgNJP+gn4k835BV6E+oOq7FLGNAlh9fUB+jAotvplvQBxCkglEKlI7Hd7iynydbx0wLC1R/idRpJJNiMCAR33A==}
     engines: {node: '>=18.13.0'}
     dependencies:
       '@uploadthing/mime-types': 0.2.1
-      '@uploadthing/shared': 5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.2)
+      '@uploadthing/shared': 5.2.5(@uploadthing/mime-types@0.2.1)(zod@3.22.4)
     transitivePeerDependencies:
       - zod
     dev: false
@@ -12401,7 +12454,7 @@ packages:
       '@peculiar/json-schema': 1.1.12
       asn1js: 3.0.5
       pvtsutils: 1.3.5
-      tslib: 2.4.1
+      tslib: 2.6.2
     dev: false
 
   /webidl-conversions@3.0.1:
@@ -12672,4 +12725,3 @@ packages:
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
-    dev: true
