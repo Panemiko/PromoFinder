@@ -2,8 +2,7 @@
   "name": "@promofinder/api",
   "version": "0.1.0",
   "private": true,
-  "main": "./index.ts",
-  "types": "./index.ts",
+  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",

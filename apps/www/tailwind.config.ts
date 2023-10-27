@@ -1,7 +1,6 @@
 import baseConfig from "@promofinder/tailwind-config";
-import { withUt } from 'uploadthing/tw';
 
-export default withUt( {
-  content: ["./src/**/*.{ts,tsx}"],
+export default {
+  content: ["./src/**/*.{ts,tsx}", "../../packages/ui/**/*.{ts,tsx}"],
   presets: [baseConfig],
-} )
+};

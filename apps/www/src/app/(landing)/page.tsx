@@ -1,7 +1,9 @@
+import { Button } from "@promofinder/ui/components/button";
+
 export default function Page() {
   return (
     <div>
-      <span>Landing page</span>
+      <Button>aaaa</Button>
     </div>
   );
 }

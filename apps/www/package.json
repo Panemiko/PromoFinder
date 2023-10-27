@@ -13,6 +13,7 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
+    "@promofinder/ui": "^0.1.0",
     "@t3-oss/env-nextjs": "^0.7.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
