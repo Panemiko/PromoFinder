@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export function BrandIcon({ className }: { className?: string }) {
   return (
     <svg

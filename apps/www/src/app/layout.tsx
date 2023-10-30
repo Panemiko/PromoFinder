@@ -41,7 +41,7 @@ export default function RootLayout({
         className={[
           "font-sans",
           fontSans.variable,
-          "min-h-screen bg-gradient-to-b from-neutral-1 to-primary-2",
+          "h-fit min-h-screen bg-gradient-to-b from-neutral-1 to-secondary-3 bg-no-repeat",
         ].join(" ")}
       >
         {children}
