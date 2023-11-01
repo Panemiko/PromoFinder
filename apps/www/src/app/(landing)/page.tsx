@@ -1,5 +1,10 @@
 import NextLink from "next/link";
-import { MailIcon } from "lucide-react";
+import {
+  ChevronsDownIcon,
+  HexagonIcon,
+  MailIcon,
+  NewspaperIcon,
+} from "lucide-react";
 
 import {
   BrandIcon,
@@ -73,7 +78,7 @@ export default function Page() {
       </header>
 
       <section id="hero">
-        <MaxWidthWrapper className="py-24">
+        <MaxWidthWrapper className="pt-24">
           <div>
             <span className="mb-3 block w-fit rounded-2xl border border-secondary-6 bg-secondary-3 px-2 py-1 text-sm font-medium text-secondary-11 shadow-2xl shadow-secondary-6">
               Em desenvolvimento 🛠
@@ -94,8 +99,67 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <section id="about">
-        <MaxWidthWrapper>A</MaxWidthWrapper>
+      <MaxWidthWrapper className="flex flex-col items-center justify-center py-48 opacity-50">
+        <hr className="w-full border border-secondary-6" />
+        <ChevronsDownIcon className="-m-5 h-10 w-10 border-2 border-secondary-6 bg-neutral-2 text-secondary-6" />
+      </MaxWidthWrapper>
+
+      <section id="problem">
+        <MaxWidthWrapper className="flex items-center gap-24 pb-24">
+          <div className="space-y-10">
+            <h2 className="sticky block text-3xl font-semibold text-neutral-12">
+              O Dilema nas Promoções Locais
+            </h2>
+            <p className="max-w-prose text-lg text-neutral-11">
+              As promoções das lojas frequentemente enfrentam um dilema
+              complexo. Muitos negócios locais usam métodos como flyers,
+              anúncios em jornais ou rádio, que são caros, pouco escaláveis e
+              raramente alcançam os consumidores certos. O resultado?{" "}
+              <strong className="font-medium underline">
+                Despesas excessivas e retornos limitados
+              </strong>
+              .
+            </p>
+            <p className="max-w-prose text-lg text-neutral-11">
+              No entanto, há uma solução. O PromoFinder está aqui para superar
+              esse desafio, conectando eficazmente as promoções das lojas com os
+              clientes que{" "}
+              <strong className="font-medium underline">
+                realmente as procuram
+              </strong>
+              , tornando o marketing local mais rentável e eficiente.
+            </p>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+
+      <section id="solution">
+        <HexagonIcon className="absolute left-64 top-2/3 fill-secondary-9/20 blur-3xl" />
+
+        <MaxWidthWrapper className="pb-24">
+          <h2 className="text-center text-5xl font-bold text-neutral-12">
+            A Solução
+          </h2>
+          <p className="max-w-prose text-lg text-neutral-11">
+            As promoções das lojas frequentemente enfrentam um dilema complexo.
+            Muitos negócios locais usam métodos como flyers, anúncios em jornais
+            ou rádio, que são caros, pouco escaláveis e raramente alcançam os
+            consumidores certos. O resultado?{" "}
+            <strong className="font-medium underline">
+              Despesas excessivas e retornos limitados
+            </strong>
+            .
+          </p>
+          <p className="max-w-prose text-lg text-neutral-11">
+            No entanto, há uma solução. O PromoFinder está aqui para superar
+            esse desafio, conectando eficazmente as promoções das lojas com os
+            clientes que{" "}
+            <strong className="font-medium underline">
+              realmente as procuram
+            </strong>
+            , tornando o marketing local mais rentável e eficiente.
+          </p>
+        </MaxWidthWrapper>
       </section>
       {/*
             - hero
