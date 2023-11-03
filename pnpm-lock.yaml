@@ -280,6 +280,9 @@ importers:
 
   apps/www:
     dependencies:
+      '@promofinder/db':
+        specifier: ^0.1.0
+        version: link:../../packages/db
       '@promofinder/ui':
         specifier: ^0.1.0
         version: link:../../packages/ui

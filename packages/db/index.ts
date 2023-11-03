@@ -1,11 +1,17 @@
 import { Client } from "@planetscale/database";
 import { drizzle } from "drizzle-orm/planetscale-serverless";
 
+import * as emailSubscriptions from "./schema/email-subscription";
 import * as products from "./schema/product";
 import * as stores from "./schema/store";
 import * as storePermissions from "./schema/store-permission";
 
-export const schema = { ...products, ...stores, ...storePermissions };
+export const schema = {
+  ...products,
+  ...stores,
+  ...storePermissions,
+  ...emailSubscriptions,
+};
 
 export { mySqlTable as tableCreator } from "./schema/_table";
 
