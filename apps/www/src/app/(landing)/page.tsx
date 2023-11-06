@@ -1,10 +1,5 @@
 import NextLink from "next/link";
-import {
-  ChevronsDownIcon,
-  HexagonIcon,
-  MailIcon,
-  NewspaperIcon,
-} from "lucide-react";
+import { ChevronsDownIcon, HexagonIcon, MailIcon } from "lucide-react";
 
 import {
   BrandIcon,
@@ -17,6 +12,7 @@ import {
 import { BackgroundBlur } from "@/components/background-blur";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { site } from "@/config/site";
+import { EmailSubscriber } from "./email-subscriber";
 
 export default function Page() {
   return (
@@ -122,8 +118,8 @@ export default function Page() {
             </p>
             <p className="max-w-prose text-lg text-neutral-11">
               No entanto, há uma solução. O PromoFinder está aqui para superar
-              esse desafio, conectando eficazmente as promoções das lojas com os
-              clientes que{" "}
+              esse desafio, conectando de maneira eficaz as promoções das lojas
+              com os clientes que{" "}
               <strong className="font-medium underline">
                 realmente as procuram
               </strong>
@@ -133,9 +129,24 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <section id="solution">
-        <HexagonIcon className="absolute left-64 top-2/3 fill-secondary-9/20 blur-3xl" />
+      <section id="validation">
+        <MaxWidthWrapper className="flex flex-col items-center gap-24 pb-24">
+          <div className="w-full space-y-10"></div>
+          <div className="grid grid-cols-3 gap-10">
+            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
+              a
+            </div>
+            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
+              a
+            </div>
+            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
+              a
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
 
+      {/* <section id="solution">
         <MaxWidthWrapper className="pb-24">
           <h2 className="text-center text-5xl font-bold text-neutral-12">
             A Solução
@@ -159,6 +170,21 @@ export default function Page() {
             </strong>
             , tornando o marketing local mais rentável e eficiente.
           </p>
+        </MaxWidthWrapper>
+      </section> */}
+
+      <section id="cta">
+        <MaxWidthWrapper>
+          <div className="flex flex-col items-center justify-center rounded-lg border-4 border-dotted border-primary-6 bg-primary-9/5 py-12 shadow-2xl shadow-primary-3">
+            <h2 className="text-center text-3xl font-semibold text-primary-12">
+              Tem interesse?
+            </h2>
+            <p className="mb-10 max-w-prose text-center text-lg text-primary-11">
+              Adicione seu e-mail para avisarmos quando o aplicativo estiver
+              disponível.
+            </p>
+            <EmailSubscriber />
+          </div>
         </MaxWidthWrapper>
       </section>
       {/*
