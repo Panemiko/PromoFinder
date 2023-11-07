@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { ChevronsDownIcon, HexagonIcon, MailIcon } from "lucide-react";
+import { ChevronsDownIcon, MailIcon } from "lucide-react";
 
 import {
   BrandIcon,
@@ -16,10 +16,13 @@ import { EmailSubscriber } from "./email-subscriber";
 
 export default function Page() {
   return (
-    <div>
+    <div
+      className="bg-cover bg-no-repeat"
+      style={{ backgroundImage: 'url("./background.svg")' }}
+    >
       <BackgroundBlur />
 
-      <header>
+      <header className="mb-24">
         <MaxWidthWrapper className="flex justify-between py-6">
           <div className="flex items-center gap-2">
             <BrandIcon className="h-8 w-8" />
@@ -73,8 +76,8 @@ export default function Page() {
         </MaxWidthWrapper>
       </header>
 
-      <section id="hero">
-        <MaxWidthWrapper className="pt-24">
+      <section id="hero" className="mb-36">
+        <MaxWidthWrapper>
           <div>
             <span className="mb-3 block w-fit rounded-2xl border border-secondary-6 bg-secondary-3 px-2 py-1 text-sm font-medium text-secondary-11 shadow-2xl shadow-secondary-6">
               Em desenvolvimento 🛠
@@ -95,13 +98,28 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <MaxWidthWrapper className="flex flex-col items-center justify-center py-48 opacity-50">
+      <MaxWidthWrapper className="mb-48 flex flex-col items-center justify-center opacity-50">
         <hr className="w-full border border-secondary-6" />
         <ChevronsDownIcon className="-m-5 h-10 w-10 border-2 border-secondary-6 bg-neutral-2 text-secondary-6" />
       </MaxWidthWrapper>
 
-      <section id="problem">
-        <MaxWidthWrapper className="flex items-center gap-24 pb-24">
+      <section id="problem" className="mb-64">
+        <MaxWidthWrapper className="flex items-center justify-between gap-24">
+          <div className="space-y-4">
+            <div className="flex w-[500px] items-center justify-center gap-10 rounded-md border-2 border-primary-6 bg-primary-5 py-5 shadow-2xl shadow-primary-6/50">
+              <span className="text-3xl font-black text-primary-11">67%</span>
+              <span className="text-xl font-medium text-primary-11">
+                Procuram promoções
+              </span>
+            </div>
+
+            <div className="flex w-[250px] items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-2 shadow-2xl shadow-secondary-6">
+              <span className="text-xl font-black text-secondary-11">17%</span>
+              <span className="font-medium text-secondary-11">
+                Têm uma ferramenta
+              </span>
+            </div>
+          </div>
           <div className="space-y-10">
             <h2 className="sticky block text-3xl font-semibold text-neutral-12">
               O Dilema nas Promoções Locais
@@ -129,54 +147,18 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <section id="validation">
-        <MaxWidthWrapper className="flex flex-col items-center gap-24 pb-24">
-          <div className="w-full space-y-10"></div>
-          <div className="grid grid-cols-3 gap-10">
-            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
-              a
-            </div>
-            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
-              a
-            </div>
-            <div className="w-full rounded-lg border-2 border-secondary-6 px-5 py-3">
-              a
-            </div>
-          </div>
+      <section id="solution" className="mb-48 bg-secondary-9/5 py-12">
+        <MaxWidthWrapper className="">
+          <h2 className="text-center text-3xl font-medium text-neutral-12">
+            Nossa Solução
+          </h2>
         </MaxWidthWrapper>
       </section>
 
-      {/* <section id="solution">
-        <MaxWidthWrapper className="pb-24">
-          <h2 className="text-center text-5xl font-bold text-neutral-12">
-            A Solução
-          </h2>
-          <p className="max-w-prose text-lg text-neutral-11">
-            As promoções das lojas frequentemente enfrentam um dilema complexo.
-            Muitos negócios locais usam métodos como flyers, anúncios em jornais
-            ou rádio, que são caros, pouco escaláveis e raramente alcançam os
-            consumidores certos. O resultado?{" "}
-            <strong className="font-medium underline">
-              Despesas excessivas e retornos limitados
-            </strong>
-            .
-          </p>
-          <p className="max-w-prose text-lg text-neutral-11">
-            No entanto, há uma solução. O PromoFinder está aqui para superar
-            esse desafio, conectando eficazmente as promoções das lojas com os
-            clientes que{" "}
-            <strong className="font-medium underline">
-              realmente as procuram
-            </strong>
-            , tornando o marketing local mais rentável e eficiente.
-          </p>
-        </MaxWidthWrapper>
-      </section> */}
-
       <section id="cta">
         <MaxWidthWrapper>
-          <div className="flex flex-col items-center justify-center rounded-lg border-4 border-dotted border-primary-6 bg-primary-9/5 py-12 shadow-2xl shadow-primary-3">
-            <h2 className="text-center text-3xl font-semibold text-primary-12">
+          <div className="flex flex-col items-center justify-center rounded-lg">
+            <h2 className="text-center text-3xl font-medium text-primary-12">
               Tem interesse?
             </h2>
             <p className="mb-10 max-w-prose text-center text-lg text-primary-11">
@@ -196,6 +178,9 @@ export default function Page() {
             - the current state
             - the team
             */}
+      <footer className="mt-40 flex items-center justify-center py-12">
+        <span className="text-neutral-11">PromoFinder &copy; 2023</span>
+      </footer>
     </div>
   );
 }

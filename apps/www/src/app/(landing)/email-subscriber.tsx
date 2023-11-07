@@ -44,16 +44,10 @@ export function EmailSubscriber() {
 
     if (res.status === 200 || res.status === 409) {
       setMessage(
-        "Tudo certo! Você será notificado quando tiver alguma novidade.",
+        "Tudo certo! Você será notificado quando tivermos alguma novidade.",
       );
 
       form.reset();
-    }
-
-    if (res.status === 400) {
-      setMessage(
-        "Houve um erro ao processar sua requisição, tente novamente mais tarde.",
-      );
     }
 
     setLoading(false);
@@ -73,8 +67,8 @@ export function EmailSubscriber() {
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-[450px] bg-primary-1"
-                    placeholder="Seu melhor e-mail"
+                    className="w-[450px]"
+                    placeholder="Seu e-mail"
                     {...field}
                   />
                 </FormControl>
@@ -93,7 +87,7 @@ export function EmailSubscriber() {
         </Button>
       </form>
 
-      <span className="mt-10 font-medium text-primary-11">{message}</span>
+      <span className="mt-10 font-medium text-success-11">{message}</span>
     </Form>
   );
 }
