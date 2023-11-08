@@ -1,3 +1,4 @@
+import Image from "next/image";
 import NextLink from "next/link";
 import { ChevronsDownIcon, MailIcon } from "lucide-react";
 
@@ -36,6 +37,30 @@ export default function Page() {
                   className="text-neutral-11 transition-colors hover:text-neutral-12"
                 >
                   Início
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  href="#solution"
+                  className="text-neutral-11 transition-colors hover:text-neutral-12"
+                >
+                  Solução
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  href="#business"
+                  className="text-neutral-11 transition-colors hover:text-neutral-12"
+                >
+                  Business
+                </NextLink>
+              </li>
+              <li>
+                <NextLink
+                  href="#app"
+                  className="text-neutral-11 transition-colors hover:text-neutral-12"
+                >
+                  Aplicativo
                 </NextLink>
               </li>
             </ul>
@@ -82,7 +107,7 @@ export default function Page() {
             <span className="mb-3 block w-fit rounded-2xl border border-secondary-6 bg-secondary-3 px-2 py-1 text-sm font-medium text-secondary-11 shadow-2xl shadow-secondary-6">
               Em desenvolvimento 🛠
             </span>
-            <h1 className="mb-14 max-w-3xl text-6xl font-bold text-neutral-12 drop-shadow-2xl">
+            <h1 className="mb-14 max-w-4xl text-7xl font-bold text-neutral-12 drop-shadow-2xl">
               Promoções locais{" "}
               <span className="bg-gradient-to-r from-primary-9 to-primary-11 bg-clip-text text-white-1">
                 eficazes
@@ -98,30 +123,32 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <MaxWidthWrapper className="mb-48 flex flex-col items-center justify-center opacity-50">
+      <MaxWidthWrapper className="mb-40 flex flex-col items-center justify-center opacity-50">
         <hr className="w-full border border-secondary-6" />
         <ChevronsDownIcon className="-m-5 h-10 w-10 border-2 border-secondary-6 bg-neutral-2 text-secondary-6" />
       </MaxWidthWrapper>
 
-      <section id="problem" className="mb-64">
+      <section id="solution" className="mb-60">
         <MaxWidthWrapper className="flex items-center justify-between gap-24">
           <div className="space-y-4">
-            <div className="flex w-[500px] items-center justify-center gap-10 rounded-md border-2 border-primary-6 bg-primary-5 py-5 shadow-2xl shadow-primary-6/50">
-              <span className="text-3xl font-black text-primary-11">67%</span>
-              <span className="text-xl font-medium text-primary-11">
+            <div className="flex w-[500px] items-center justify-center gap-10 rounded-md border-2 border-primary-6 bg-primary-5 py-10 shadow-2xl shadow-primary-6/50">
+              <span className="text-5xl font-black text-primary-11 drop-shadow-2xl">
+                67%
+              </span>
+              <span className="text-3xl font-medium text-primary-11">
                 Procuram promoções
               </span>
             </div>
 
-            <div className="flex w-[250px] items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-2 shadow-2xl shadow-secondary-6">
-              <span className="text-xl font-black text-secondary-11">17%</span>
+            <div className="flex w-[250px] items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-4 shadow-2xl shadow-secondary-6">
+              <span className="text-2xl font-black text-secondary-11">17%</span>
               <span className="font-medium text-secondary-11">
                 Têm uma ferramenta
               </span>
             </div>
           </div>
           <div className="space-y-10">
-            <h2 className="sticky block text-3xl font-semibold text-neutral-12">
+            <h2 className="sticky block text-4xl font-bold text-neutral-12 drop-shadow-2xl">
               O Dilema nas Promoções Locais
             </h2>
             <p className="max-w-prose text-lg text-neutral-11">
@@ -147,21 +174,80 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <section id="solution" className="mb-48 bg-secondary-9/5 py-12">
+      <section id="business" className="mb-36 overflow-hidden py-20">
         <MaxWidthWrapper className="">
-          <h2 className="text-center text-3xl font-medium text-neutral-12">
-            Nossa Solução
-          </h2>
+          <div className="flex items-center justify-between">
+            <div className="pt-28">
+              <h3 className="mb-14 bg-gradient-to-r from-secondary-12 to-black-12 bg-clip-text text-8xl font-bold text-white-1 drop-shadow-2xl">
+                <span>PromoFinder</span> Business
+              </h3>
+              <p className="mb-6 max-w-prose text-lg text-neutral-11">
+                Para solucionar esses problemas nós introduzimos o PromoFinder
+                Business: Uma plataforma que permite que as lojas publiquem
+                promoções a preços acessíveis diretamente para um público
+                regional.
+              </p>
+              <p className="max-w-prose text-lg text-neutral-11">
+                Com anúncios abaixo do mercado, facilidade de uso e alcance
+                direcionado, o PromoFinder Business não apenas economiza
+                recursos, mas também{" "}
+                <strong className="font-medium underline">
+                  expande a base de clientes
+                </strong>
+                , ajudando sua empresa a prosperar de maneira inteligente e
+                eficaz.
+              </p>
+            </div>
+            <Image
+              className="relative -right-40 max-w-2xl rounded-lg border border-secondary-6 shadow-2xl shadow-secondary-6"
+              alt="tela de criação de produtos do promofinder business"
+              src="/business-preview.png"
+              width={1440}
+              height={1024}
+            />
+          </div>
         </MaxWidthWrapper>
       </section>
+
+      {/* <section id="app" className="mb-48 overflow-hidden py-20">
+        <MaxWidthWrapper className="">
+          <h2 className="mb-10 text-center text-3xl font-medium text-neutral-12">
+            Nossa Solução
+          </h2>
+          <div className="flex flex-row-reverse items-center justify-between">
+            <h3 className="mb-10 text-6xl font-bold text-primary-12 drop-shadow-2xl">
+              Aplicativo <br /> móvel
+            </h3>
+            <div>
+              <p className="max-w-prose text-lg text-neutral-11">
+                Já para os clientes PromoFinder é a solução idea os que desejam
+                economizar tempo e dinheiro. Com nosso aplicativo, eles podem
+                encontrar facilmente ofertas próximas, eliminando a necessidade
+                de múltiplos aplicativos e pesquisas em redes sociais. Além
+                disso, oferecemos promoções exclusivas, proporcionando
+                benefícios especiais aos nossos usuários. Com o PromoFinder, a
+                economia e a comodidade se tornam simples e acessíveis.
+              </p>
+            </div>
+
+            <Image
+              className="relative -right-40 max-w-2xl rounded-lg border border-primary-6 shadow-2xl shadow-primary-6"
+              alt="tela de criação de produtos do promofinder business"
+              src="/business-preview.png"
+              width={1440}
+              height={1024}
+            />
+          </div>
+        </MaxWidthWrapper>
+      </section> */}
 
       <section id="cta">
         <MaxWidthWrapper>
           <div className="flex flex-col items-center justify-center rounded-lg">
-            <h2 className="text-center text-3xl font-medium text-primary-12">
+            <h2 className="mb-4 text-center text-5xl font-medium text-primary-12">
               Tem interesse?
             </h2>
-            <p className="mb-10 max-w-prose text-center text-lg text-primary-11">
+            <p className="mb-4 max-w-prose text-center text-lg text-primary-11">
               Adicione seu e-mail para avisarmos quando o aplicativo estiver
               disponível.
             </p>
