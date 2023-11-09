@@ -2,7 +2,7 @@ export function BackgroundBlur() {
   return (
     <>
       <svg
-        className="absolute right-40 top-1/3 fill-primary-9/20 blur-3xl"
+        className="absolute right-40 top-1/3 hidden fill-primary-9/20 blur-3xl md:block"
         height="200px"
         width="200px"
         version="1.1"
@@ -26,7 +26,7 @@ export function BackgroundBlur() {
         </g>
       </svg>
       <svg
-        className="absolute left-64 top-2/3 fill-secondary-9/20 blur-3xl"
+        className="absolute left-64 top-2/3 hidden fill-secondary-9/20 blur-3xl md:block"
         height="200px"
         width="200px"
         version="1.1"

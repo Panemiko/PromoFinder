@@ -57,17 +57,17 @@ export function EmailSubscriber() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(subscribe)}
-        className="flex items-center justify-between gap-6"
+        className="flex flex-col items-center justify-between gap-6 px-3 md:flex-row md:px-0"
       >
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
-            <div>
+            <div className="w-full md:w-fit">
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-[450px]"
+                    className="w-full md:w-[450px]"
                     placeholder="Seu e-mail"
                     {...field}
                   />
@@ -82,6 +82,7 @@ export function EmailSubscriber() {
           isLoading={loading}
           disabled={!form.formState.isValid}
           type="submit"
+          className="w-full md:w-fit"
         >
           ADICIONAR
         </Button>

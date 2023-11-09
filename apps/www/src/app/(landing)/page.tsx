@@ -1,18 +1,9 @@
 import Image from "next/image";
-import NextLink from "next/link";
-import { ChevronsDownIcon, MailIcon } from "lucide-react";
-
-import {
-  BrandIcon,
-  BrandLogo,
-  ButtonLink,
-  InstagramIcon,
-  WhatsappIcon,
-} from "@promofinder/ui";
+import { ChevronsDownIcon } from "lucide-react";
 
 import { BackgroundBlur } from "@/components/background-blur";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { site } from "@/config/site";
+import { Header } from "@/components/ui/header";
 import { EmailSubscriber } from "./email-subscriber";
 
 export default function Page() {
@@ -22,84 +13,7 @@ export default function Page() {
       style={{ backgroundImage: 'url("./background.svg")' }}
     >
       <BackgroundBlur />
-
-      <header className="mb-24">
-        <MaxWidthWrapper className="flex justify-between py-6">
-          <div className="flex items-center gap-2">
-            <BrandIcon className="h-8 w-8" />
-            <BrandLogo className="w-48" />
-          </div>
-          <div className="flex gap-10">
-            <ul className="flex items-center gap-8">
-              <li>
-                <NextLink
-                  href="#hero"
-                  className="text-neutral-11 transition-colors hover:text-neutral-12"
-                >
-                  Início
-                </NextLink>
-              </li>
-              <li>
-                <NextLink
-                  href="#solution"
-                  className="text-neutral-11 transition-colors hover:text-neutral-12"
-                >
-                  Solução
-                </NextLink>
-              </li>
-              <li>
-                <NextLink
-                  href="#business"
-                  className="text-neutral-11 transition-colors hover:text-neutral-12"
-                >
-                  Business
-                </NextLink>
-              </li>
-              <li>
-                <NextLink
-                  href="#app"
-                  className="text-neutral-11 transition-colors hover:text-neutral-12"
-                >
-                  Aplicativo
-                </NextLink>
-              </li>
-            </ul>
-            <div
-              aria-hidden="true"
-              className="my-2 w-px border-r-[1px] border-neutral-6"
-            ></div>
-            <div className="space-x-6">
-              <ButtonLink
-                size="icon"
-                variant="ghost"
-                target="_blank"
-                href={site.instagramLink}
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="h-6 w-6" />
-              </ButtonLink>
-              <ButtonLink
-                size="icon"
-                variant="ghost"
-                target="_blank"
-                href={site.whatsappLink}
-                aria-label="Whatsapp"
-              >
-                <WhatsappIcon className="h-6 w-6" />
-              </ButtonLink>
-              <ButtonLink
-                size="icon"
-                variant="ghost"
-                target="_blank"
-                href={`mailto:${site.contactEmail}`}
-                aria-label="E-mail"
-              >
-                <MailIcon className="h-6 w-6" />
-              </ButtonLink>
-            </div>
-          </div>
-        </MaxWidthWrapper>
-      </header>
+      <Header />
 
       <section id="hero" className="mb-36">
         <MaxWidthWrapper>
@@ -107,7 +21,7 @@ export default function Page() {
             <span className="mb-3 block w-fit rounded-2xl border border-secondary-6 bg-secondary-3 px-2 py-1 text-sm font-medium text-secondary-11 shadow-2xl shadow-secondary-6">
               Em desenvolvimento 🛠
             </span>
-            <h1 className="mb-14 max-w-4xl text-7xl font-bold text-neutral-12 drop-shadow-2xl">
+            <h1 className="mb-14 max-w-4xl text-5xl font-bold text-neutral-12 drop-shadow-2xl md:text-7xl">
               Promoções locais{" "}
               <span className="bg-gradient-to-r from-primary-9 to-primary-11 bg-clip-text text-white-1">
                 eficazes
@@ -123,24 +37,24 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      <MaxWidthWrapper className="mb-40 flex flex-col items-center justify-center opacity-50">
+      <MaxWidthWrapper className="mb-32 flex flex-col items-center justify-center opacity-50 md:mb-40">
         <hr className="w-full border border-secondary-6" />
         <ChevronsDownIcon className="-m-5 h-10 w-10 border-2 border-secondary-6 bg-neutral-2 text-secondary-6" />
       </MaxWidthWrapper>
 
       <section id="solution" className="mb-60">
-        <MaxWidthWrapper className="flex items-center justify-between gap-24">
-          <div className="space-y-4">
-            <div className="flex w-[500px] items-center justify-center gap-10 rounded-md border-2 border-primary-6 bg-primary-5 py-10 shadow-2xl shadow-primary-6/50">
-              <span className="text-5xl font-black text-primary-11 drop-shadow-2xl">
+        <MaxWidthWrapper className="flex flex-col-reverse items-center justify-between gap-24 md:flex-row">
+          <div className="w-full space-y-4">
+            <div className="flex w-full items-center justify-center gap-6 rounded-md border-2 border-primary-6 bg-primary-5 py-10 shadow-2xl shadow-primary-6/50 md:w-[500px] md:gap-10">
+              <span className="text-3xl font-black text-primary-11 drop-shadow-2xl md:text-5xl">
                 67%
               </span>
-              <span className="text-3xl font-medium text-primary-11">
+              <span className="text-2xl font-medium text-primary-11 md:text-3xl">
                 Procuram promoções
               </span>
             </div>
 
-            <div className="flex w-[250px] items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-4 shadow-2xl shadow-secondary-6">
+            <div className="flex w-full items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-4 shadow-2xl shadow-secondary-6 md:w-[250px]">
               <span className="text-2xl font-black text-secondary-11">17%</span>
               <span className="font-medium text-secondary-11">
                 Têm uma ferramenta
@@ -148,8 +62,9 @@ export default function Page() {
             </div>
           </div>
           <div className="space-y-10">
-            <h2 className="sticky block text-4xl font-bold text-neutral-12 drop-shadow-2xl">
-              O Dilema nas Promoções Locais
+            <h2 className="flex max-w-prose flex-col text-3xl font-bold text-neutral-11 drop-shadow-2xl">
+              O Dilema das
+              <span className="text-6xl text-neutral-12">Promoções Locais</span>
             </h2>
             <p className="max-w-prose text-lg text-neutral-11">
               As promoções das lojas frequentemente enfrentam um dilema
@@ -176,10 +91,10 @@ export default function Page() {
 
       <section id="business" className="mb-36 overflow-hidden py-20">
         <MaxWidthWrapper className="">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col-reverse items-center justify-between md:flex-row">
             <div className="pt-28">
-              <h3 className="mb-14 bg-gradient-to-r from-secondary-12 to-black-12 bg-clip-text text-8xl font-bold text-white-1 drop-shadow-2xl">
-                <span>PromoFinder</span> Business
+              <h3 className="mb-14 bg-gradient-to-r from-secondary-12 to-black-12 bg-clip-text text-6xl font-bold text-white-1 drop-shadow-2xl md:text-8xl">
+                PromoFinder Business
               </h3>
               <p className="mb-6 max-w-prose text-lg text-neutral-11">
                 Para solucionar esses problemas nós introduzimos o PromoFinder
@@ -199,7 +114,7 @@ export default function Page() {
               </p>
             </div>
             <Image
-              className="relative -right-40 max-w-2xl rounded-lg border border-secondary-6 shadow-2xl shadow-secondary-6"
+              className="-right-40 rounded-lg border border-secondary-6 shadow-2xl shadow-secondary-6 md:relative md:max-w-2xl"
               alt="tela de criação de produtos do promofinder business"
               src="/business-preview.png"
               width={1440}
@@ -242,28 +157,20 @@ export default function Page() {
       </section> */}
 
       <section id="cta">
-        <MaxWidthWrapper>
-          <div className="flex flex-col items-center justify-center rounded-lg">
-            <h2 className="mb-4 text-center text-5xl font-medium text-primary-12">
-              Tem interesse?
+        <MaxWidthWrapper className="flex flex-col items-center justify-center">
+          <div className="rounded-lg border border-primary-6 bg-primary-1 py-12 md:px-20">
+            <h2 className="mb-4 text-center text-3xl font-medium text-primary-12">
+              Interesse em saber mais?
             </h2>
             <p className="mb-4 max-w-prose text-center text-lg text-primary-11">
-              Adicione seu e-mail para avisarmos quando o aplicativo estiver
-              disponível.
+              Adicione seu e-mail para avisarmos quando tivermos alguma
+              novidade!
             </p>
             <EmailSubscriber />
           </div>
         </MaxWidthWrapper>
       </section>
-      {/*
-            - hero
-            - about
-            - how it works
-            - why is it important
-            - the solution for the customer
-            - the current state
-            - the team
-            */}
+
       <footer className="mt-40 flex items-center justify-center py-12">
         <span className="text-neutral-11">PromoFinder &copy; 2023</span>
       </footer>
