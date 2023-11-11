@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import Image from "next/image";
 import { ChevronsDownIcon } from "lucide-react";
 
@@ -44,21 +45,27 @@ export default function Page() {
 
       <section id="solution" className="mb-60">
         <MaxWidthWrapper className="flex flex-col-reverse items-center justify-between gap-24 md:flex-row">
-          <div className="w-full space-y-4">
-            <div className="flex w-full items-center justify-center gap-6 rounded-md border-2 border-primary-6 bg-primary-5 py-10 shadow-2xl shadow-primary-6/50 md:w-[500px] md:gap-10">
-              <span className="text-3xl font-black text-primary-11 drop-shadow-2xl md:text-5xl">
-                67%
-              </span>
-              <span className="text-2xl font-medium text-primary-11 md:text-3xl">
-                Procuram promoções
-              </span>
+          <div className="w-full space-y-4 md:w-[550px]">
+            <div className="flex w-full items-center justify-start rounded-lg bg-neutral-9/10">
+              <div className="flex w-5/6 items-center gap-6 rounded-md border-2 border-primary-6 bg-primary-5/50 py-10 shadow-2xl shadow-primary-6/50 md:gap-6">
+                <span className="ml-3 text-5xl font-black text-primary-11 md:text-6xl">
+                  67%
+                </span>
+                <span className="text-3xl font-medium text-primary-11 md:text-3xl">
+                  Procuram promoções
+                </span>
+              </div>
             </div>
 
-            <div className="flex w-full items-center justify-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5 py-4 shadow-2xl shadow-secondary-6 md:w-[250px]">
-              <span className="text-2xl font-black text-secondary-11">17%</span>
-              <span className="font-medium text-secondary-11">
-                Têm uma ferramenta
-              </span>
+            <div className="flex w-full items-center justify-between rounded-lg bg-neutral-9/10">
+              <div className="flex items-center gap-4 rounded-md border-2 border-secondary-6 bg-secondary-5/50 py-4 shadow-2xl shadow-secondary-6 md:w-6/12">
+                <span className="ml-3 text-2xl font-black text-secondary-11 md:text-3xl">
+                  17%
+                </span>
+                <span className="text-xl font-medium text-secondary-11">
+                  Têm uma ferramenta
+                </span>
+              </div>
             </div>
           </div>
           <div className="space-y-10">
@@ -93,9 +100,9 @@ export default function Page() {
         <MaxWidthWrapper className="">
           <div className="flex flex-col-reverse items-center justify-between md:flex-row">
             <div className="pt-28">
-              <h3 className="mb-14 bg-gradient-to-r from-secondary-12 to-black-12 bg-clip-text text-6xl font-bold text-white-1 drop-shadow-2xl md:text-8xl">
+              <h2 className="mb-14 bg-gradient-to-r from-secondary-12 to-black-12 bg-clip-text text-6xl font-bold text-white-1 drop-shadow-2xl md:text-8xl">
                 PromoFinder Business
-              </h3>
+              </h2>
               <p className="mb-6 max-w-prose text-lg text-neutral-11">
                 Para solucionar esses problemas nós introduzimos o PromoFinder
                 Business: Uma plataforma que permite que as lojas publiquem
@@ -124,37 +131,32 @@ export default function Page() {
         </MaxWidthWrapper>
       </section>
 
-      {/* <section id="app" className="mb-48 overflow-hidden py-20">
-        <MaxWidthWrapper className="">
-          <h2 className="mb-10 text-center text-3xl font-medium text-neutral-12">
-            Nossa Solução
-          </h2>
-          <div className="flex flex-row-reverse items-center justify-between">
-            <h3 className="mb-10 text-6xl font-bold text-primary-12 drop-shadow-2xl">
-              Aplicativo <br /> móvel
-            </h3>
-            <div>
-              <p className="max-w-prose text-lg text-neutral-11">
-                Já para os clientes PromoFinder é a solução idea os que desejam
-                economizar tempo e dinheiro. Com nosso aplicativo, eles podem
-                encontrar facilmente ofertas próximas, eliminando a necessidade
-                de múltiplos aplicativos e pesquisas em redes sociais. Além
-                disso, oferecemos promoções exclusivas, proporcionando
-                benefícios especiais aos nossos usuários. Com o PromoFinder, a
-                economia e a comodidade se tornam simples e acessíveis.
-              </p>
-            </div>
-
-            <Image
-              className="relative -right-40 max-w-2xl rounded-lg border border-primary-6 shadow-2xl shadow-primary-6"
-              alt="tela de criação de produtos do promofinder business"
-              src="/business-preview.png"
-              width={1440}
-              height={1024}
-            />
+      <section id="app" className="mb-48 overflow-hidden py-20">
+        <MaxWidthWrapper className="flex flex-col items-center justify-center gap-12 md:flex-row md:gap-32">
+          <video
+            className="w-[calc(100vw-125px)] rotate-6 rounded-lg border-2 border-primary-6 shadow-2xl shadow-primary-6 md:max-h-[500px] md:w-fit"
+            autoPlay
+            loop
+            src="/promofinder-app-prototype.mov"
+          ></video>
+          <div className="mt-20 max-w-xl">
+            <h2 className="mb-10 text-6xl font-bold text-primary-12 drop-shadow-2xl md:text-8xl">
+              PromoFinder App
+            </h2>
+            <p className="mb-6 text-lg text-neutral-11">
+              Já para os clientes PromoFinder é a solução idea os que desejam
+              economizar tempo e dinheiro. Com nosso aplicativo, eles podem
+              encontrar facilmente ofertas próximas, eliminando a necessidade de
+              múltiplos aplicativos e pesquisas em redes sociais.
+            </p>
+            <p className="text-lg text-neutral-11">
+              Além disso, oferecemos promoções exclusivas, proporcionando
+              benefícios especiais aos nossos usuários. Com o PromoFinder, a
+              economia e a comodidade se tornam simples e acessíveis.
+            </p>
           </div>
         </MaxWidthWrapper>
-      </section> */}
+      </section>
 
       <section id="cta">
         <MaxWidthWrapper className="flex flex-col items-center justify-center">
