@@ -280,6 +280,9 @@ importers:
 
   apps/www:
     dependencies:
+      '@builder.io/partytown':
+        specifier: ^0.8.1
+        version: 0.8.1
       '@hookform/resolvers':
         specifier: ^3.3.2
         version: 3.3.2(react-hook-form@7.47.0)
@@ -2076,6 +2079,12 @@ packages:
       react-native: '*'
     dependencies:
       react-native: 0.72.5(@babel/core@7.23.0)(@babel/preset-env@7.22.20)(react@18.2.0)
+    dev: false
+
+  /@builder.io/partytown@0.8.1:
+    resolution: {integrity: sha512-p4xhEtQCPe8YFJ8e7KT9RptnT+f4lvtbmXymbp1t0bLp+USkNMTxrRMNc3Dlr2w2fpxyX7uA0CyAeU3ju84O4A==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
     dev: false
 
   /@clerk/backend@0.31.2(react@18.2.0):

@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
 
+import Script from "next/script";
+import { Partytown } from "@builder.io/partytown/react";
+
 import { site } from "@/config/site";
 
 export const dynamic = "force-dynamic";
@@ -37,6 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <Partytown forward={["dataLayer.push"]} />
+        <Script type="text/partytown" src="/analytics.js"></Script>
+      </head>
       <body
         className={[
           "font-sans",
