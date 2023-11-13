@@ -10,6 +10,7 @@ if (!process.env.DATABASE_URL) throw new Error("Invalid environment variables");
 export default {
   schema: "./schema",
   driver: "mysql2",
+  out: "drizzle",
   dbCredentials: {
     connectionString: process.env.DATABASE_URL,
   },

@@ -1,0 +1,253 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "id": "ae20e30c-1329-4248-9705-104cb84fea52",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "promofinder_email_subscriptions": {
+      "name": "promofinder_email_subscriptions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "promofinder_email_subscriptions_id": {
+          "name": "promofinder_email_subscriptions_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "promofinder_email_subscriptions_email_unique": {
+          "name": "promofinder_email_subscriptions_email_unique",
+          "columns": [
+            "email"
+          ]
+        }
+      }
+    },
+    "promofinder_products": {
+      "name": "promofinder_products",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "onUpdate": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar(1024)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "photo_id": {
+          "name": "photo_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ean_code": {
+          "name": "ean_code",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "promofinder_products_id": {
+          "name": "promofinder_products_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "promofinder_store_permissions": {
+      "name": "promofinder_store_permissions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "onUpdate": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "role": {
+          "name": "role",
+          "type": "enum('master','admin','promoter','user')",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "enabled": {
+          "name": "enabled",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "store_id": {
+          "name": "store_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "promofinder_store_permissions_id": {
+          "name": "promofinder_store_permissions_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "promofinder_stores": {
+      "name": "promofinder_stores",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "onUpdate": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "banner_key": {
+          "name": "banner_key",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "avatar_key": {
+          "name": "avatar_key",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "promofinder_stores_id": {
+          "name": "promofinder_stores_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
