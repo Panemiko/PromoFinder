@@ -135,9 +135,7 @@ export default function Page() {
         <MaxWidthWrapper className="flex flex-col items-center justify-center gap-12 md:flex-row md:gap-32">
           <video
             className="w-[calc(100vw-125px)] rotate-6 rounded-lg border-2 border-primary-6 shadow-2xl shadow-primary-6 md:max-h-[500px] md:w-fit"
-            autoPlay
-            loop
-            src="/promofinder-prototype.mov"
+            src="/promofinder-prototype.mp4"
           ></video>
           <div className="mt-20 max-w-xl">
             <h2 className="mb-10 text-6xl font-bold text-primary-12 drop-shadow-2xl md:text-8xl">
