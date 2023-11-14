@@ -144,10 +144,10 @@ export default function Page() {
               PromoFinder App
             </h2>
             <p className="mb-6 text-lg text-neutral-11">
-              Já para os clientes PromoFinder é a solução idea os que desejam
-              economizar tempo e dinheiro. Com nosso aplicativo, eles podem
-              encontrar facilmente ofertas próximas, eliminando a necessidade de
-              múltiplos aplicativos e pesquisas em redes sociais.
+              Já para os clientes PromoFinder é a solução ideal para os que
+              desejam economizar tempo e dinheiro. Com nosso aplicativo, eles
+              podem encontrar facilmente ofertas próximas, eliminando a
+              necessidade de múltiplos aplicativos e pesquisas em redes sociais.
             </p>
             <p className="text-lg text-neutral-11">
               Além disso, oferecemos promoções exclusivas, proporcionando
