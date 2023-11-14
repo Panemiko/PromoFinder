@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import Image from "next/image";
 import { ChevronsDownIcon } from "lucide-react";
 
@@ -133,10 +132,13 @@ export default function Page() {
 
       <section id="app" className="mb-48 overflow-hidden py-20">
         <MaxWidthWrapper className="flex flex-col items-center justify-center gap-12 md:flex-row md:gap-32">
-          <video
-            className="w-[calc(100vw-125px)] rotate-6 rounded-lg border-2 border-primary-6 shadow-2xl shadow-primary-6 md:max-h-[500px] md:w-fit"
-            src="/promofinder-prototype.mp4"
-          ></video>
+          <Image
+            alt="protótipo do aplicativo"
+            width={360}
+            height={754}
+            className="w-[calc(100vw-125px)] rotate-6 rounded-lg border-2 border-primary-6 shadow-2xl shadow-primary-6/50 md:max-h-[500px] md:w-fit"
+            src="/app-preview.png"
+          />
           <div className="mt-20 max-w-xl">
             <h2 className="mb-10 text-6xl font-bold text-primary-12 drop-shadow-2xl md:text-8xl">
               PromoFinder App
